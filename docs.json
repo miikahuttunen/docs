@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Realm Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#248573",
+    "light": "#248573",
+    "dark": "#248573"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -14,7 +14,7 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Get started",
             "pages": [
               "index",
               "quickstart",
@@ -82,8 +82,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/realm-logo-black.png",
+    "dark": "/logo/realm-logo-white.png"
   },
   "navbar": {
     "links": [
