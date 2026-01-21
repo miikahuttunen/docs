@@ -1,0 +1,94 @@
+---
+title: 'Writing Effective Queries'
+description: 'Learn how to write prompts that get the best answers from Realm'
+icon: 'lightbulb'
+---
+
+## How to Write Effective Chat Queries
+
+The way you prompt Chat has a big impact on the quality of the answers. A good rule of thumb: ask questions the same way you would ask a knowledgeable colleague—clear, specific, and with enough context.
+
+## Best Practices
+
+### 1. Mention Good Sources
+
+If you know of a relevant source, include it in your query.
+
+<Tip>
+**Good:** "Based on our shareholders' agreement, how often should we hold board meetings?"
+</Tip>
+
+### 2. Ask Follow-up Questions
+
+Continue the conversation to dig deeper into a topic.
+
+```text
+First query: "What is the current list of Realm connectors?"
+Follow-up: "Do we have Gong on the roadmap?"
+```
+
+### 3. Specify Output Format
+
+Provide instructions on how you want your reply formatted.
+
+<Tip>
+**Good examples:**
+- "Create a table describing how Realm differs from Glean"
+- "Write a short email about our HIPAA and GDPR compliance"
+</Tip>
+
+### 4. Specify Tools and Time Ranges
+
+Be explicit about where to look and when.
+
+```text
+"Based on Linear and Slack, what's the status of Realm API project?"
+"List all PRs about the Cycles feature from the past two days"
+"What are the most recent mentions of bugs on #engineering-product?"
+```
+
+### 5. Request Corrections
+
+If the initial answer got something wrong, ask for corrections.
+
+```text
+"Only include results from Acme company, exclude everything else."
+"There should be more clients listed. Can you double check?"
+```
+
+## Less Effective Prompts
+
+<Warning>
+Avoid vague or incomplete prompts like:
+- "Connectors?"
+- "Roadmap?"
+- "Email about GDPR."
+
+These lack context and specificity, leading to less accurate responses.
+</Warning>
+
+## When to Ask Follow-ups vs. Start a New Chat
+
+You can ask follow-up questions, and Chat will remember the context from your previous message. This helps you dig deeper without repeating yourself.
+
+<AccordionGroup>
+  <Accordion title="Ask a follow-up" icon="arrow-right">
+    When you're continuing the same topic—for example, clarifying or expanding on the previous answer.
+  </Accordion>
+  <Accordion title="Start a new thread" icon="plus">
+    When you're switching to a different topic—this avoids confusion and keeps responses relevant.
+  </Accordion>
+</AccordionGroup>
+
+## Using the @ Keybind
+
+`@` is a universal keybind in Realm that lets you quickly select Assistants, documents, or tools.
+
+For example, to switch to GPT-4.1:
+1. Type `@`
+2. Start typing "gpt"
+3. Press Enter to select GPT-4.1
+
+<Frame>
+  <img src="/images/help-center/at-keybind.png" alt="Using the @ keybind to select assistants" />
+</Frame>

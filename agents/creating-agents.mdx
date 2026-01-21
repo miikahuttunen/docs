@@ -1,0 +1,108 @@
+---
+title: 'Creating Agents'
+description: 'Step-by-step guide to creating your own AI Agent'
+icon: 'plus'
+---
+
+## Creating an Agent
+
+Follow these steps to create a custom Agent in Realm.
+
+<Note>
+Watch the video below for a quick walkthrough of the Agent creation process.
+</Note>
+
+<Frame>
+  <video
+    controls
+    src="/images/help-center/creating-agent.mp4"
+    title="Creating an Agent in Realm"
+  />
+</Frame>
+
+## Configuration Options
+
+When creating an Agent, you'll configure the following:
+
+<Steps>
+  <Step title="Web Search">
+    Choose whether the Agent can use web search (e.g., for finding latest company news online).
+  </Step>
+  <Step title="Knowledge Access">
+    Select one of:
+    - **All Company Knowledge** - Access to everything connected to Realm
+    - **Selected Company Knowledge** - Only specific files, folders, or sources
+    - **No Company Knowledge** - Pure AI without company context
+  </Step>
+  <Step title="Instructions">
+    Provide instructions for how the Agent should behave—its core task, response formatting, and any specific guidelines.
+  </Step>
+  <Step title="LLM Selection">
+    Choose which language model to use. Optionally, set a specific temperature for the LLM.
+  </Step>
+  <Step title="Slack Integration (Optional)">
+    Connect the Agent to a Slack channel for team access.
+  </Step>
+</Steps>
+
+## Step-by-Step Creation
+
+### 1. Open the Agents Page
+
+Click **"Assistants"** in the sidebar.
+
+<Frame>
+  <img src="/images/help-center/agents-sidebar.png" alt="Agents in sidebar" />
+</Frame>
+
+### 2. Start Creating
+
+Click **"Create Assistant"** in the top-right corner.
+
+<Frame>
+  <img src="/images/help-center/create-agent-button.png" alt="Create Assistant button" />
+</Frame>
+
+### 3. Describe Your Agent
+
+Tell Realm what you want the Agent to do in Chat, and follow the instructions. Alternatively, create a prompt beforehand in one of the LLMs.
+
+<Frame>
+  <img src="/images/help-center/agent-description.png" alt="Describing your Agent" />
+</Frame>
+
+### 4. Configure in Detail
+
+Finalize your Agent in the **"Configure"** view. You can also skip the previous step and build your Agent from scratch here.
+
+<Frame>
+  <img src="/images/help-center/agent-configure.png" alt="Agent configuration screen" />
+</Frame>
+
+## Configuration Tips
+
+<AccordionGroup>
+  <Accordion title="Start Simple" icon="lightbulb">
+    Begin with basic instructions and add complexity as you learn what works.
+  </Accordion>
+  <Accordion title="Test Iteratively" icon="rotate">
+    After creating your Agent, test it with various queries and refine the instructions.
+  </Accordion>
+  <Accordion title="Be Specific About Knowledge" icon="folder">
+    If your Agent needs specific documents, select them explicitly rather than giving broad access.
+  </Accordion>
+  <Accordion title="Consider Your Audience" icon="users">
+    Think about who will use the Agent and what questions they'll ask.
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Writing Instructions" icon="pen" href="/agents/writing-instructions">
+    Learn best practices for Agent prompts
+  </Card>
+  <Card title="Knowledge Selection" icon="folder" href="/agents/knowledge-selection">
+    Configure what knowledge your Agent can access
+  </Card>
+</CardGroup>

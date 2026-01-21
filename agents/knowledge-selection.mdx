@@ -1,0 +1,97 @@
+---
+title: 'Knowledge Selection'
+description: 'Configure what knowledge your Agent can access'
+icon: 'folder'
+---
+
+## Selecting Knowledge for Agents
+
+When creating an Agent with access to specific knowledge, you'll configure what sources it can search through.
+
+## Knowledge Access Options
+
+<CardGroup cols={3}>
+  <Card title="All Company Knowledge" icon="building">
+    Access to everything connected to Realm
+  </Card>
+  <Card title="Selected Knowledge" icon="folder-open">
+    Only specific files, folders, or sources you choose
+  </Card>
+  <Card title="No Knowledge" icon="lock">
+    Pure AI without company context
+  </Card>
+</CardGroup>
+
+## Selecting Specific Knowledge
+
+When you choose to give your Agent access to specific knowledge, you'll use the Knowledge view.
+
+<Frame>
+  <img src="/images/help-center/knowledge-selection.png" alt="Knowledge selection interface" />
+</Frame>
+
+### What You Can Select
+
+- **Individual files** from any connected source
+- **Folders** from Google Drive, SharePoint, etc.
+- **Channels** from Slack
+- **Spaces** from Confluence
+- **Projects** from Jira
+- **Uploaded files** specifically for this Agent
+
+## Uploading Files for Agents
+
+You can upload files specifically for your Agent to use. These files will be part of the Agent's knowledge base.
+
+<Steps>
+  <Step title="Open Knowledge View">
+    Navigate to the Knowledge selection screen while configuring your Agent.
+  </Step>
+  <Step title="Upload Files">
+    Click the upload button to add files from your device.
+  </Step>
+  <Step title="Confirm Selection">
+    The uploaded files will appear in your selected knowledge.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/help-center/knowledge-upload.png" alt="Uploading files for Agent" />
+</Frame>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Be Selective" icon="filter">
+    Only include knowledge that's relevant to your Agent's purpose. Too much irrelevant data can reduce accuracy.
+  </Accordion>
+  <Accordion title="Keep Sources Updated" icon="rotate">
+    If you upload files, remember to update them when the underlying information changes.
+  </Accordion>
+  <Accordion title="Use Verified Content" icon="badge-check">
+    When possible, include documents that have been [verified](/curation/verifying-and-hiding) in Realm.
+  </Accordion>
+  <Accordion title="Test with Different Queries" icon="vial">
+    After setting up knowledge, test your Agent with various questions to ensure it's finding the right information.
+  </Accordion>
+</AccordionGroup>
+
+## Example Configurations
+
+| Agent Type | Knowledge Selection |
+|------------|---------------------|
+| Customer Success Bot | Customer folder in Drive, #customer-success Slack channel |
+| Product FAQ Bot | Product documentation in Confluence, Feature specs |
+| Onboarding Assistant | HR folder, Company wiki, Onboarding checklist |
+| Sales Support | Sales decks, Pricing documents, Competitive battle cards |
+
+## Related Pages
+
+<CardGroup cols={2}>
+  <Card title="Creating Agents" icon="plus" href="/agents/creating-agents">
+    Step-by-step Agent creation guide
+  </Card>
+  <Card title="Writing Instructions" icon="pen" href="/agents/writing-instructions">
+    Best practices for Agent prompts
+  </Card>
+</CardGroup>

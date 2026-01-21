@@ -1,0 +1,93 @@
+---
+title: 'Google Drive Connector'
+description: 'Connect Google Drive to sync documents and files'
+icon: 'google-drive'
+---
+
+## Google Drive Connector
+
+Realm supports two types of Google Drive syncs:
+
+<CardGroup cols={2}>
+  <Card title="Shared Drives" icon="folder-tree">
+    Admin-configured sync of team Shared Drives
+  </Card>
+  <Card title="Personal Drives" icon="user">
+    User-configured sync of individual Drive access
+  </Card>
+</CardGroup>
+
+## Connecting Shared Drives
+
+### Setting Up the Connection
+
+<Steps>
+  <Step title="Identify an Admin">
+    Choose a Google Drive admin to perform the connection.
+
+    <Note>
+    **Restricting API Access:**
+    Realm only syncs the Shared Drives you select. To further limit API access:
+    1. Create a Google Workspace account (e.g., realm@your-domain.com)
+    2. Share only the Shared Drives you want Realm to access with this account
+    3. Perform the OAuth flow with this account
+    </Note>
+  </Step>
+  <Step title="Connect Drive">
+    Navigate to `https://[your-organization].withrealm.com/admin/connect?open=google-drive` and click **Authorize**.
+  </Step>
+  <Step title="Grant Access">
+    You'll see an OAuth consent screen. Click **Allow**.
+
+    <Frame>
+      <img src="/images/help-center/google-drive-oauth.png" alt="Google Drive OAuth" />
+    </Frame>
+  </Step>
+  <Step title="Select Shared Drives">
+    Choose which Shared Drives you want to sync from the list of all available drives.
+  </Step>
+</Steps>
+
+### Content Synced
+
+From selected Shared Drives, Realm syncs:
+
+- Google Docs
+- Google Slides
+- Google Sheets
+- PDFs
+- Microsoft Office files (.docx, .pptx, .xlsx)
+- And other common document formats
+
+### Content Not Supported
+
+- Google Forms
+- Google Sites
+- Comments on files
+
+## Connecting Personal Drives
+
+Every user can connect Google Drive files that they personally have access to.
+
+### How to Connect
+
+<Steps>
+  <Step title="Open Settings">
+    Navigate to Settings in Realm.
+  </Step>
+  <Step title="Connect Google Drive">
+    Find the Google Drive section and click Connect.
+  </Step>
+  <Step title="Authorize">
+    Complete the OAuth flow to grant Realm access.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/help-center/personal-drive.png" alt="Personal Drive connection" />
+</Frame>
+
+### Permissions
+
+- Other users who already had access to the same files will also gain access in Realm
+- Realm strictly follows native Google Drive permissions for all materials

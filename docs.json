@@ -14,50 +14,123 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Get started",
+            "group": "Get Started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "introduction",
+              "quickstart"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Chat",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "chat/overview",
+              "chat/effective-queries",
+              "chat/citations",
+              "chat/research-mode",
+              "chat/file-attachments",
+              "chat/filters",
+              "chat/special-features"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Search",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "search/overview",
+              "search/filters-and-sorting",
+              "search/query-syntax",
+              "search/previews"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Agents",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "agents/overview",
+              "agents/creating-agents",
+              "agents/writing-instructions",
+              "agents/knowledge-selection",
+              "agents/triggers",
+              "agents/tools-and-actions"
+            ]
+          },
+          {
+            "group": "AI Models",
+            "pages": [
+              "ai-models/available-models"
+            ]
+          },
+          {
+            "group": "RFP Automation",
+            "pages": [
+              "rfp/filling-rfps",
+              "rfp/formatting"
+            ]
+          },
+          {
+            "group": "Curation",
+            "pages": [
+              "curation/verifying-and-hiding"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Integrations",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Slack",
+            "pages": [
+              "integrations/slack-app",
+              "integrations/slack-agents"
+            ]
+          },
+          {
+            "group": "Browser",
+            "pages": [
+              "integrations/chrome-extension"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Admin Guide",
+        "groups": [
+          {
+            "group": "Administration",
+            "pages": [
+              "admin/overview"
+            ]
+          },
+          {
+            "group": "Connectors",
+            "pages": [
+              "admin/connectors/overview",
+              "admin/connectors/slack",
+              "admin/connectors/google-drive",
+              "admin/connectors/hubspot",
+              "admin/connectors/salesforce",
+              "admin/connectors/jira",
+              "admin/connectors/confluence",
+              "admin/connectors/zendesk",
+              "admin/connectors/sharepoint",
+              "admin/connectors/freshdesk",
+              "admin/connectors/notion",
+              "admin/connectors/intercom",
+              "admin/connectors/web-scraping"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "API Documentation",
             "pages": [
               "api-reference/introduction"
             ]
           },
           {
-            "group": "Reference",
+            "group": "Endpoints",
             "openapi": {
               "source": "realm-api-docs.json",
               "directory": "api-reference"
@@ -89,32 +162,31 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@withrealm.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Open Realm",
+      "href": "https://app.withrealm.com"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/withrealm",
+      "linkedin": "https://linkedin.com/company/withrealm"
     }
   }
 }

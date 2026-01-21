@@ -1,0 +1,78 @@
+---
+title: 'Salesforce Connector'
+description: 'Connect Salesforce to sync CRM data'
+icon: 'salesforce'
+---
+
+## Salesforce Connector
+
+Connect Salesforce to sync your CRM data into Realm.
+
+## Setting Up the Connection
+
+<Steps>
+  <Step title="Identify an Admin">
+    Choose a Salesforce admin to perform the connection.
+  </Step>
+  <Step title="Ensure Access">
+    Make sure the admin has full read access to the following Salesforce objects:
+    - Account
+    - Opportunity
+    - Contact
+    - Contract
+    - Order
+    - Case
+    - Campaign
+    - Lead
+    - Product
+  </Step>
+  <Step title="Connect Salesforce">
+    Navigate to `https://[your-organization].withrealm.com/admin/connect?open=salesforce` and click **Authorize**.
+  </Step>
+  <Step title="Complete OAuth">
+    You'll be redirected to Salesforce's OAuth flow. Log in if needed, then allow access for Realm.
+  </Step>
+  <Step title="Select Properties and Objects">
+    After being redirected back to Realm, select which properties and objects you want to sync.
+
+    <Frame>
+      <img src="/images/help-center/salesforce-objects.png" alt="Salesforce object selection" />
+    </Frame>
+  </Step>
+</Steps>
+
+## Content Synced
+
+Only the data you explicitly select is synced and available in Realm:
+
+- **Accounts** - Company information
+- **Opportunities** - Sales pipeline data
+- **Contacts** - People at accounts
+- **Contracts** - Agreement details
+- **Orders** - Purchase records
+- **Cases** - Support tickets
+- **Campaigns** - Marketing campaigns
+- **Leads** - Prospective customers
+- **Products** - Product catalog
+
+## Configuration Options
+
+For each object, you can select:
+
+- Which fields/properties to sync
+- Whether to include related records
+- Custom objects (if available)
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Required Permissions" icon="key">
+    The connecting user must have read access to all objects and fields being synced.
+  </Accordion>
+  <Accordion title="Custom Objects" icon="cube">
+    If you use custom objects, ensure they're included in your sync configuration.
+  </Accordion>
+  <Accordion title="Field Selection" icon="list">
+    Focus on fields that contain searchable, useful content rather than system fields.
+  </Accordion>
+</AccordionGroup>

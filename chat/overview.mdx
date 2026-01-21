@@ -1,0 +1,75 @@
+---
+title: 'Chat Overview'
+description: 'Ask questions and get AI-powered answers from your company knowledge'
+icon: 'message'
+---
+
+## What is Chat?
+
+Chat is the core interface of Realm. It allows you to interact with different Assistants and run a variety of workflows—from searching internal knowledge to using external AI tools.
+
+### Assistant Types
+
+You can switch between Assistants by clicking the Realm icon in Chat or by typing `@`. Each Assistant is designed for a specific purpose:
+
+<CardGroup cols={3}>
+  <Card title="Realm (Default)" icon="building">
+    Ask questions about all your company's connected knowledge—like documents, wikis, and messages—while respecting existing permissions.
+  </Card>
+  <Card title="LLMs" icon="microchip">
+    Access leading AI models like GPT-5, Claude Sonnet 4.5, Gemini 2.5, and others directly within Realm for general-purpose reasoning and writing.
+  </Card>
+  <Card title="Custom Agents" icon="robot">
+    Use specialized Agents your team has built to handle specific tasks, tools, or workflows.
+  </Card>
+</CardGroup>
+
+## Security and Privacy
+
+Chat is designed with security and privacy in mind:
+
+<AccordionGroup>
+  <Accordion title="No data is used for training" icon="lock">
+    Your data is never used to train language models.
+  </Accordion>
+  <Accordion title="Zero data retention" icon="shield">
+    We use secure, zero-retention endpoints when interacting with language models.
+  </Accordion>
+  <Accordion title="Permission-aware responses" icon="user-shield">
+    Chat strictly follows your organization's access controls. You'll only see information you already have permission to access.
+  </Accordion>
+</AccordionGroup>
+
+## AI Models Used
+
+Realm uses leading AI models from OpenAI, Anthropic, and Google. The platform automatically selects the model that delivers the best performance for your query. We continuously evaluate and fine-tune model selection to ensure the best possible user experience.
+
+## Accuracy Considerations
+
+<Warning>
+Chat can occasionally provide inaccurate or incomplete answers. This can happen due to:
+
+1. **Complex data retrieval** - Retrieving precise information from large, unstructured company knowledge can be challenging
+2. **Source quality** - If the underlying content is outdated, incomplete, or incorrect, Chat may reflect that
+3. **Prompt phrasing** - How you phrase your question can influence how well Chat understands what you're asking
+4. **Conflicting information** - When sources disagree, Chat may produce a confident but incorrect answer
+</Warning>
+
+We recommend verifying important responses. You can help us improve by rating replies with the thumbs up/down icons to share feedback directly with our team.
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Write Effective Queries" icon="lightbulb" href="/chat/effective-queries">
+    Learn how to get the best answers from Chat
+  </Card>
+  <Card title="Use Citations" icon="quote-left" href="/chat/citations">
+    Understand how to verify and explore source materials
+  </Card>
+  <Card title="Research Mode" icon="flask" href="/chat/research-mode">
+    Handle complex analytical challenges
+  </Card>
+  <Card title="File Attachments" icon="paperclip" href="/chat/file-attachments">
+    Ask questions about uploaded files
+  </Card>
+</CardGroup>

@@ -1,0 +1,70 @@
+---
+title: 'Freshdesk Connector'
+description: 'Connect Freshdesk and Freshservice to sync tickets'
+icon: 'headset'
+---
+
+## Freshdesk / Freshservice Connector
+
+Connect Freshdesk or Freshservice to sync your support tickets into Realm.
+
+<Note>
+Realm supports both **Freshdesk** and **Freshservice**. Both can be connected via the Freshdesk connector. Freshservice connection is in *beta*.
+</Note>
+
+## Setting Up the Connection
+
+<Steps>
+  <Step title="Identify a User">
+    Choose a Freshdesk/Freshservice user to set up the connection. The user should have access to the tickets you want to sync.
+  </Step>
+  <Step title="Open Realm">
+    Navigate to `https://[your-organization].withrealm.com/admin/connect?open=freshdesk`.
+  </Step>
+  <Step title="Create an API Key">
+    Follow the instructions to find your API key:
+
+    - **Freshdesk**: [How to find your API key](https://support.freshdesk.com/support/solutions/articles/215517-how-to-find-your-api-key)
+    - **Freshservice**: [Where to find your API key](https://support.freshservice.com/support/solutions/articles/50000000306-where-do-i-find-my-api-key-)
+
+    Copy and paste the key into Realm.
+  </Step>
+  <Step title="Enter Your Domain">
+    Enter your Freshdesk/Freshservice domain:
+    - Freshdesk: `https://company-name.freshdesk.com/`
+    - Freshservice: `https://company-name.freshservice.com/`
+  </Step>
+  <Step title="Submit">
+    Click Submit. Realm will start syncing your tickets.
+  </Step>
+</Steps>
+
+## Important Requirements
+
+<Warning>
+The API key should be from a user with an **Admin Role** for full access to all tickets.
+</Warning>
+
+## Sync Duration
+
+The full sync can take from hours to multiple days, depending on how many tickets you have.
+
+## Content Synced
+
+- Support tickets
+- Ticket conversations
+- Resolution notes
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Use Admin Account" icon="shield">
+    Connect with an admin account to ensure access to all tickets.
+  </Accordion>
+  <Accordion title="Monitor Initial Sync" icon="clock">
+    The first sync may take time for large ticket volumes.
+  </Accordion>
+  <Accordion title="API Key Security" icon="key">
+    Keep your API key secure and rotate it periodically.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,136 @@
+---
+title: 'Writing Instructions'
+description: 'Best practices for writing effective Agent prompts'
+icon: 'pen'
+---
+
+## How to Write Good Instructions for Agents
+
+The quality of your Agent's responses depends heavily on the instructions you provide. Follow these core principles to create effective Agents.
+
+## Core Principles
+
+### 1. Be Clear and Precise
+
+Provide specific objectives and detailed instructions. Longer prompts with relevant context outperform short queries.
+
+<Tip>
+Use action verbs, define expected output format and length, and specify your target audience.
+</Tip>
+
+### 2. Provide Appropriate Context
+
+Supply sufficient background information instead of simplifying complex topics. Modern AI models can process complex information effectively. Summarize what you want the assistant to know and do.
+
+### 3. Structure Your Prompts Effectively
+
+Follow a logical ordering:
+1. Task context/role assignment
+2. Tone setting
+3. Background information/documents
+4. Detailed task description with rules
+
+### 4. Include Format Guidance
+
+Adding examples to prompts significantly improves model response quality, especially when you need specific formatting.
+
+<Note>
+**Show, don't just tell.** Examples of desired outputs work better than descriptions of what you want.
+</Note>
+
+### 5. Define a Clear Persona
+
+Always define a persona to set the tone of the response. This guides how the model communicates and is especially important for customer-facing documentation.
+
+```text
+Example: "You are a helpful IT support specialist who explains technical
+concepts in simple terms..."
+```
+
+### 6. Tailor to Your Audience
+
+Include specific details about your target audience to ensure relevant outputs.
+
+```text
+Example: "This content is for tech-savvy developers at a startup who are
+familiar with REST APIs..."
+```
+
+### 7. Address Potential Issues Proactively
+
+Provide instructions for handling edge cases. Focus on reliably covering base cases first before moving to edge cases.
+
+### 8. Test and Iterate
+
+Evaluate prompts under various scenarios and provide feedback to improve outputs. Prompt engineering is an iterative process.
+
+## Bonus Tip: Metaprompting
+
+Ask the LLM in Realm to create prompts for you:
+
+<Steps>
+  <Step title="Open Chat">
+    Start a new chat session.
+  </Step>
+  <Step title="Select an LLM">
+    Choose Claude, Gemini, or GPT.
+  </Step>
+  <Step title="Describe Your Task">
+    Explain what you want the Agent to accomplish.
+  </Step>
+  <Step title="Get a Prompt">
+    The AI will generate an optimized prompt for you.
+  </Step>
+</Steps>
+
+<Note>
+Modern LLMs excel at creating effective prompts for themselves or other models, often producing better results than manually crafted prompts.
+</Note>
+
+## Example Instruction Structure
+
+```text
+# Role
+You are [specific role] for [company/context].
+
+# Task
+Given [input], your job is to [specific task].
+
+# Guidelines
+- [Guideline 1]
+- [Guideline 2]
+- [Guideline 3]
+
+# Output Format
+[Describe expected format]
+
+# Examples
+Input: [example input]
+Output: [example output]
+
+# Constraints
+- Only use information from the provided materials
+- If unsure, say so rather than guessing
+- [Other constraints]
+```
+
+## Common Mistakes to Avoid
+
+<Warning>
+**Don't:**
+- Use vague instructions like "be helpful"
+- Assume the AI knows your company context
+- Give contradictory instructions
+- Make instructions too long without structure
+</Warning>
+
+## Related Pages
+
+<CardGroup cols={2}>
+  <Card title="Creating Agents" icon="plus" href="/agents/creating-agents">
+    Start creating your Agent
+  </Card>
+  <Card title="Knowledge Selection" icon="folder" href="/agents/knowledge-selection">
+    Configure Agent knowledge access
+  </Card>
+</CardGroup>

@@ -1,0 +1,100 @@
+---
+title: 'Connectors Overview'
+description: 'Connect your workplace tools to Realm'
+icon: 'plug'
+---
+
+## What Knowledge Does Realm Have Access To?
+
+Your company's admins have connected specific apps and selected which parts of their content—such as particular Confluence Spaces or Salesforce objects—should be available in Realm.
+
+### Viewing Connected Sources
+
+To view the list of connected sources and what data is included, click **"Knowledge"** in the Realm sidebar.
+
+<Frame>
+  <img src="/images/help-center/knowledge-sidebar.png" alt="Knowledge view in sidebar" />
+</Frame>
+
+## Available Connectors
+
+Realm has native connectors for 20+ common workplace tools:
+
+<CardGroup cols={3}>
+  <Card title="Slack" icon="slack" href="/admin/connectors/slack">
+    Messages, files, and threads
+  </Card>
+  <Card title="Google Drive" icon="google-drive" href="/admin/connectors/google-drive">
+    Docs, Sheets, Slides, PDFs
+  </Card>
+  <Card title="HubSpot" icon="hubspot" href="/admin/connectors/hubspot">
+    CRM data and content
+  </Card>
+  <Card title="Salesforce" icon="salesforce" href="/admin/connectors/salesforce">
+    Accounts, opportunities, contacts
+  </Card>
+  <Card title="Jira" icon="jira" href="/admin/connectors/jira">
+    Issues, epics, comments
+  </Card>
+  <Card title="Confluence" icon="confluence" href="/admin/connectors/confluence">
+    Pages, blogs, files
+  </Card>
+  <Card title="Zendesk" icon="ticket" href="/admin/connectors/zendesk">
+    Tickets and knowledge base
+  </Card>
+  <Card title="SharePoint" icon="microsoft" href="/admin/connectors/sharepoint">
+    Documents and sites
+  </Card>
+  <Card title="Freshdesk" icon="headset" href="/admin/connectors/freshdesk">
+    Tickets and service management
+  </Card>
+  <Card title="Notion" icon="n" href="/admin/connectors/notion">
+    Pages and databases
+  </Card>
+  <Card title="Intercom" icon="intercom" href="/admin/connectors/intercom">
+    Conversations and tickets
+  </Card>
+  <Card title="Web Scraping" icon="globe" href="/admin/connectors/web-scraping">
+    Any public website
+  </Card>
+</CardGroup>
+
+## Permissions and Access Control
+
+<AccordionGroup>
+  <Accordion title="Does Realm respect existing permissions?" icon="shield">
+    Yes, Realm mirrors your company's existing permission model. Users can only access the data they're authorized to see based on the source system's permissions. Admins can also configure access by revoking permissions for specific tools or granting broader access when needed.
+  </Accordion>
+  <Accordion title="Are results up-to-date?" icon="clock">
+    Realm refreshes the search index at least every two hours, depending on the connector. Some sources, like Slack, are updated nearly in real time.
+  </Accordion>
+  <Accordion title="Can users upload their own files?" icon="upload">
+    Yes! Users can upload files from the "Knowledge" page. Uploaded files appear under "Uploaded documents." When uploading, you can choose to make files private or public. Public files appear in the "Shared files" folder.
+  </Accordion>
+</AccordionGroup>
+
+## Missing Knowledge?
+
+If you can't find what you're looking for in Realm, it's usually due to one of these reasons:
+
+| Reason | Solution |
+|--------|----------|
+| **Data isn't synced** | The IT team may not have connected the data source yet |
+| **Access rights** | You may not have permission in the source system |
+| **Search limitations** | Try different search terms or filters |
+
+<Tip>
+Not sure which one it is? Send us a message in your company's shared Slack channel with Realm—we're happy to help troubleshoot.
+</Tip>
+
+## Connector Sync Issues
+
+If you notice that a sync has Failed or hasn't completed for multiple days, please reach out to the Realm team. Sync issues almost always require action on our end.
+
+Our team proactively monitors your syncs, but sometimes we may have missed a particular failed sync.
+
+## Admin-Only
+
+<Note>
+Only Admins can connect apps to Realm. If you need a new connector set up, contact your Realm administrator.
+</Note>

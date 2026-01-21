@@ -1,0 +1,92 @@
+---
+title: 'SharePoint Connector'
+description: 'Connect SharePoint to sync documents and sites'
+icon: 'microsoft'
+---
+
+## SharePoint Connector
+
+Connect SharePoint to sync your documents and sites into Realm.
+
+## Setting Up the Connection
+
+<Steps>
+  <Step title="Identify an Admin">
+    Choose a Microsoft admin to perform the connection.
+  </Step>
+  <Step title="Connect SharePoint">
+    Navigate to `https://[your-organization].withrealm.com/admin/connect?open=sharepoint` and click **Authorize**.
+
+    <Frame>
+      <img src="/images/help-center/sharepoint-authorize.png" alt="SharePoint authorization" />
+    </Frame>
+  </Step>
+  <Step title="Accept Permissions">
+    You'll see an OAuth consent screen. Click **Accept**.
+
+    <Frame>
+      <img src="/images/help-center/sharepoint-consent.png" alt="SharePoint consent screen" />
+    </Frame>
+
+    <Note>
+    This won't start syncing any data yet.
+    </Note>
+  </Step>
+  <Step title="Select Sites">
+    After being redirected back to Realm, select which sites you want to sync.
+
+    <Frame>
+      <img src="/images/help-center/sharepoint-sites.png" alt="SharePoint site selection" />
+    </Frame>
+  </Step>
+</Steps>
+
+## Required Scopes
+
+The SharePoint integration requires:
+- `Sites.Read.All`
+- `Files.Read.All`
+- `Directory.Read.All`
+- `Notes.Read.All`
+
+## Authentication Options
+
+### Delegated Scopes (Default)
+
+The default connection uses delegated scopes. Realm will only be able to sync documents that the account doing the connection has access to.
+
+<Note>
+Permissions are still enforced—users can only see what they have access to.
+</Note>
+
+### Application Scopes (Optional)
+
+If you want to sync *all* available documents, click **"Connect with application permissions"**.
+
+<Frame>
+  <img src="/images/help-center/sharepoint-app-permissions.png" alt="Application permissions option" />
+</Frame>
+
+This allows Realm to access all documents in SharePoint. [Learn more about delegated vs application scopes](https://learn.microsoft.com/en-us/entra/identity-platform/permissions-consent-overview#delegated-access-access-on-behalf-of-a-user).
+
+## Restricting Access
+
+You can choose which SharePoint sites are synced in Realm. To further restrict API access:
+
+1. Create a Microsoft service account that only has access to specific sites
+2. Ensure the account can consent to applications
+3. Use that account in the OAuth flow
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Start with Key Sites" icon="star">
+    Begin by syncing your most important SharePoint sites and expand coverage as needed.
+  </Accordion>
+  <Accordion title="Consider Service Accounts" icon="user-gear">
+    Use a service account for more controlled access to SharePoint content.
+  </Accordion>
+  <Accordion title="Review Permissions" icon="shield">
+    Understand the difference between delegated and application scopes before choosing.
+  </Accordion>
+</AccordionGroup>

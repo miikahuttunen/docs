@@ -1,0 +1,88 @@
+---
+title: 'RFP Formatting Guidelines'
+description: 'How to prepare your RFPs for optimal results in Realm'
+icon: 'table'
+---
+
+## RFP Formatting Best Practices
+
+Realm is designed to handle RFPs with diverse and complicated structures. Most of the time, you won't need to edit the RFP before uploading it to Realm.
+
+## When to Simplify Your RFP
+
+If the RFP looks off after being uploaded to Realm, you may need to simplify it and upload again.
+
+## Formatting Tips
+
+<AccordionGroup>
+  <Accordion title="Continuous Table Structure" icon="table-cells">
+    Make sure the question and answer columns form one continuous table. Remove any empty columns that break up the structure.
+  </Accordion>
+  <Accordion title="Remove Unnecessary Information" icon="trash">
+    Remove any unnecessary information from the RFP. For example, there might be additional information outside of the actual area to be answered.
+  </Accordion>
+  <Accordion title="Descriptive Headers" icon="heading">
+    Make sure each of the columns that should be answered have descriptive headers, such as "Answer" or "Vendor Answer".
+  </Accordion>
+  <Accordion title="Unmerge Cells" icon="table-cells-row-unlock">
+    Unmerge any merged cells that might confuse the parser.
+  </Accordion>
+</AccordionGroup>
+
+## Example: Before and After
+
+### Before (Problematic)
+
+| Question | | Vendor Answer | Notes |
+|----------|--|---------------|-------|
+| Describe your security measures | | | |
+| | | | |
+| Compliance certifications? | | | |
+
+**Issues:**
+- Empty column between Question and Vendor Answer
+- Empty row in the middle
+
+### After (Optimized)
+
+| Question | Vendor Answer | Notes |
+|----------|---------------|-------|
+| Describe your security measures | | |
+| Compliance certifications? | | |
+
+**Fixed:**
+- Continuous table structure
+- No empty rows or columns
+
+## Supported File Types
+
+<CardGroup cols={3}>
+  <Card title="XLSX" icon="file-excel">
+    Microsoft Excel (recommended)
+  </Card>
+  <Card title="XLS" icon="file-excel">
+    Legacy Excel format
+  </Card>
+  <Card title="CSV" icon="file-csv">
+    Comma-separated values
+  </Card>
+</CardGroup>
+
+## Common Issues and Solutions
+
+| Issue | Solution |
+|-------|----------|
+| Sections not detected correctly | Check for merged cells and empty rows |
+| Wrong columns selected for answers | Ensure answer columns have clear headers |
+| Extra content appearing | Remove text outside the main table |
+| Sheet structure not preserved | Don't worry—export will match original |
+
+## Tips for Best Results
+
+<Tip>
+**Pro tip:** If you frequently receive RFPs from the same customer or in the same format, create a template with consistent structure to speed up future processing.
+</Tip>
+
+1. **Test with a simple RFP first** - Get familiar with the process using a straightforward document
+2. **Review the AI plan carefully** - Catch any parsing issues before filling begins
+3. **Create dedicated RFP Agents** - Build Agents with curated knowledge for common RFP topics

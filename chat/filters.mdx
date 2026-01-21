@@ -1,0 +1,70 @@
+---
+title: 'Using Filters in Chat'
+description: 'Apply filters to narrow down search results in your queries'
+icon: 'filter'
+---
+
+## Automatic Filter Detection
+
+Realm is trained to automatically apply filters that you refer to in your chat query. You can mention specific criteria, and Realm will apply the appropriate filters.
+
+## How It Works
+
+When you include filter criteria in your query, Realm automatically detects and applies them:
+
+```text
+"How many HubSpot deals of type new business are in the stage building business case?"
+```
+
+Realm will:
+1. Identify the data source (HubSpot)
+2. Apply the deal type filter (new business)
+3. Apply the stage filter (building business case)
+4. Return relevant results
+
+<Frame>
+  <img src="/images/help-center/chat-filters.png" alt="Chat filters in action" />
+</Frame>
+
+## Reviewing and Editing Filters
+
+You can see what filters Realm chose to apply. If some of them are incorrect, you can:
+
+<Steps>
+  <Step title="Review Applied Filters">
+    Check the filters shown above your results to see what was applied.
+  </Step>
+  <Step title="Edit Filters">
+    Click on the pencil icon to modify any incorrect filters.
+  </Step>
+  <Step title="Rerun Query">
+    After editing, rerun the query to get updated results.
+  </Step>
+</Steps>
+
+## Filter Examples
+
+<AccordionGroup>
+  <Accordion title="By Data Source" icon="database">
+    "Based on Linear and Slack, what's the status of the API project?"
+  </Accordion>
+  <Accordion title="By Time Range" icon="calendar">
+    "List all PRs about the Cycles feature from the past two days"
+  </Accordion>
+  <Accordion title="By Channel or Location" icon="hashtag">
+    "What are the most recent mentions of bugs on #engineering-product?"
+  </Accordion>
+  <Accordion title="By Entity" icon="building">
+    "Only include results from Acme company, exclude everything else"
+  </Accordion>
+</AccordionGroup>
+
+## Tips for Effective Filtering
+
+<Tip>
+Be specific in your queries to help Realm apply the right filters:
+- Mention specific tools (Slack, HubSpot, Linear)
+- Include time ranges (past week, last month)
+- Name specific channels, folders, or entities
+- Specify document types when relevant
+</Tip>

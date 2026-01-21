@@ -1,0 +1,122 @@
+---
+title: 'Slack Connector'
+description: 'Connect Slack to sync messages and files'
+icon: 'slack'
+---
+
+## Slack Connector
+
+This guide outlines the two main steps for connecting your Slack workspace to Realm:
+
+1. **Connecting via OAuth** - Enables real-time syncing of new messages and files
+2. **Importing Historical Data** - Upload a Slack workspace export to sync past conversations
+
+## Part 1: Real-Time Connection
+
+This process connects your Slack workspace to Realm, allowing continuous syncing of new messages and files from public channels.
+
+<Steps>
+  <Step title="Identify an Admin">
+    Choose a Slack workspace administrator to perform the connection.
+  </Step>
+  <Step title="Connect Slack">
+    Navigate to `https://[your-organization].withrealm.com/admin/connect?open=slack` and click **"Authorize access to Slack"**.
+
+    <Frame>
+      <img src="/images/help-center/slack-authorize.png" alt="Slack authorization" />
+    </Frame>
+  </Step>
+  <Step title="Grant Access">
+    You'll be redirected to a Slack OAuth consent screen. Review the permissions and click **Allow**.
+  </Step>
+</Steps>
+
+Once authorized, Realm will begin syncing new messages from **all public channels** in your workspace.
+
+### Syncing Private Channels
+
+To sync messages from **private channels**, add the Realm app to the channel you want to sync.
+
+## Part 2: Historical Data Import
+
+Due to Slack API limitations, a full historical sync via the API is slow (~900 messages per hour). Uploading a workspace export is the recommended method to quickly import your entire message history.
+
+### Export Your Slack Data
+
+<Steps>
+  <Step title="Access Workspace Settings">
+    As a Slack workspace admin, go to **Settings & administration** > **Workspace settings**.
+  </Step>
+  <Step title="Navigate to Export">
+    Click **Import/Export Data** in the top right, then select the **Export** tab.
+  </Step>
+  <Step title="Configure Export">
+    Choose a date range for your export. To get all history, select the entire range.
+  </Step>
+  <Step title="Start Export">
+    Click **Start Export**. Slack will notify you when the export is complete.
+  </Step>
+  <Step title="Download">
+    Download the ZIP file containing your workspace data.
+  </Step>
+</Steps>
+
+### Upload to Realm
+
+<Steps>
+  <Step title="Open Slack Settings">
+    Navigate to `https://[your-organization].withrealm.com/admin/connect?open=slack`.
+  </Step>
+  <Step title="Upload Export">
+    Find the historical data import section and upload the ZIP file.
+
+    <Frame>
+      <img src="/images/help-center/slack-upload.png" alt="Slack export upload" />
+    </Frame>
+  </Step>
+  <Step title="Wait for Processing">
+    A progress bar will appear. Processing time depends on the size of your export.
+  </Step>
+</Steps>
+
+### Important Considerations
+
+- **Private Channels**: You can choose to exclude private channel messages using a toggle in settings
+- **File Size Limit**: Maximum 10GB. For larger exports, use multiple exports with different date ranges
+
+## Content Synced
+
+### By Default
+
+- Conversations in public channels (messages, thread replies)
+- Files shared in public channels
+
+### Additional Content (Optional)
+
+- **Slack Connect channels** - Configurable in settings
+- **Private channels** - Any channels where Realm's Slack App has been added
+- **DMs** - Not self-serve; contact us if interested
+
+### Not Supported
+
+- Canvases
+- Lists
+
+## Required Scopes
+
+<AccordionGroup>
+  <Accordion title="Bot Scopes" icon="robot">
+    `channels:history`, `channels:read`, `files:read`, `pins:read`, `reactions:read`, `team:read`, `users:read`, `users:read.email`, `im:history`, `im:read`, `chat:write`, `chat:write.customize`, `app_mentions:read`, `reactions:write`, `groups:read`, `assistant:write`, `mpim:history`, `mpim:read`, `groups:history`
+  </Accordion>
+  <Accordion title="User Scopes" icon="user">
+    `channels:history`, `channels:read`, `files:read`, `pins:read`, `reactions:read`, `team:read`, `users:read`, `users:read.email`, `search:read`
+  </Accordion>
+</AccordionGroup>
+
+## Notes
+
+Slack can be a noisy source. To reduce noise, Realm:
+
+- Ignores threads with bot messages and no human messages
+- Penalizes archived channels in ranking
+- Penalizes very short messages in ranking

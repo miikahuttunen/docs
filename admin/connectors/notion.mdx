@@ -1,0 +1,63 @@
+---
+title: 'Notion Connector'
+description: 'Connect Notion to sync pages and databases'
+icon: 'n'
+---
+
+## Notion Connector
+
+Connect Notion to sync your pages and databases into Realm.
+
+## Setting Up the Connection
+
+<Steps>
+  <Step title="Identify an Admin">
+    Choose a Notion admin to perform the connection.
+  </Step>
+  <Step title="Ensure Access">
+    Make sure the admin has the necessary permissions to access the Notion data you want to sync.
+  </Step>
+  <Step title="Connect Notion">
+    Navigate to `https://[your-organization].withrealm.com/admin/connect?open=notion` and click **Authorize Access to Notion**.
+  </Step>
+  <Step title="Complete OAuth">
+    You'll be redirected to Notion's OAuth flow.
+  </Step>
+  <Step title="Select Pages">
+    At this point, you'll be asked to select which Pages to sync.
+
+    <Note>
+    Child pages are automatically included when you select a parent page.
+    </Note>
+  </Step>
+  <Step title="Complete Setup">
+    You'll be redirected back to Realm with the connection active.
+  </Step>
+</Steps>
+
+## Content Synced
+
+- Pages
+- Child pages (automatically included)
+- Databases
+- Database entries
+
+## Permissions
+
+Notion's permissions model is respected:
+- Users can only see content they have access to in Notion
+- Shared pages are accessible to all users with Notion access
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Start with Key Workspaces" icon="folder">
+    Select your most important top-level pages to sync their entire hierarchy.
+  </Accordion>
+  <Accordion title="Review Page Selection" icon="list-check">
+    Remember that child pages are automatically included—no need to select them individually.
+  </Accordion>
+  <Accordion title="Admin Permissions" icon="shield">
+    Ensure the connecting admin has access to all content you want to sync.
+  </Accordion>
+</AccordionGroup>

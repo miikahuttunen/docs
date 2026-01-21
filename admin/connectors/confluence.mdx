@@ -1,0 +1,94 @@
+---
+title: 'Confluence Connector'
+description: 'Connect Confluence to sync pages and content'
+icon: 'confluence'
+---
+
+## Confluence Connector
+
+Connect Confluence to sync your wiki pages, blogs, and embedded files into Realm.
+
+## Setting Up the Connection (Cloud)
+
+<Steps>
+  <Step title="Identify an Admin">
+    Choose an admin with access to the Confluence spaces you want to sync.
+  </Step>
+  <Step title="Install Realm Connect App">
+    Navigate to `https://[your-organization].withrealm.com/admin/connect?open=confluence` and follow the instructions:
+
+    1. Go to [Realm on Atlassian Marketplace](https://marketplace.atlassian.com/apps/1233308/realm?tab=overview&hosting=cloud)
+    2. Click "Get it now" and install the app for the site you want to connect
+  </Step>
+  <Step title="Configure the App">
+    Once installed, click "Configure" and copy the tokens into Realm.
+
+    <Frame>
+      <img src="/images/help-center/confluence-tokens.png" alt="Confluence token configuration" />
+    </Frame>
+  </Step>
+  <Step title="Select Spaces">
+    Choose which spaces you want to sync from the list of available spaces.
+
+    <Frame>
+      <img src="/images/help-center/confluence-spaces.png" alt="Confluence space selection" />
+    </Frame>
+  </Step>
+</Steps>
+
+## Content Synced
+
+From any Confluence Spaces you choose to sync:
+
+- Pages
+- Blogs
+- Embedded files (such as PDFs)
+
+## Content Not Supported
+
+- Private Pages
+- Comments
+
+## Confluence Data Center
+
+For Confluence Data Center (self-hosted), follow these steps:
+
+<Steps>
+  <Step title="Create Personal Access Token">
+    Follow [Atlassian's instructions](https://confluence.atlassian.com/enterprise/using-personal-access-tokens-1026032365.html) to create a PAT.
+
+    <Note>
+    Disable the "Automatic expiry" option to prevent sync interruptions.
+    </Note>
+  </Step>
+  <Step title="Enter Credentials">
+    Enter the token and your Confluence instance URL at `https://[your-organization].withrealm.com/admin/connect?open=confluence`.
+  </Step>
+  <Step title="Select Spaces">
+    Once connected, select the Confluence spaces you want to sync.
+  </Step>
+</Steps>
+
+## Smart Features
+
+Realm integrates with Confluence's content lifecycle:
+
+| Confluence Feature | Realm Behavior |
+|-------------------|----------------|
+| Verified pages | Auto-verified in Realm |
+| Archived pages | Auto-hidden in Realm |
+| Draft pages | Not shown until published |
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Space Selection" icon="folder">
+    Start with your most important spaces (product docs, engineering wiki) and expand as needed.
+  </Accordion>
+  <Accordion title="Use Confluence Verification" icon="badge-check">
+    Mark important pages as verified in Confluence—they'll automatically be verified in Realm.
+  </Accordion>
+  <Accordion title="Archive Old Content" icon="box-archive">
+    Archive outdated pages in Confluence rather than deleting them—they'll be hidden in Realm.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,83 @@
+---
+title: 'Adding Agents to Slack Channels'
+description: 'Configure AI Agents to respond in specific Slack channels'
+icon: 'hashtag'
+---
+
+## Agents in Slack Channels
+
+Realm allows you to add Agents to Slack channels. For example, if you have a `#solutions-engineering` Slack channel, you could add a Virtual Solutions Engineer Agent there.
+
+Your team can then ask questions in the Slack channel by writing `@Realm` and asking their question.
+
+## Setting Up an Agent in a Channel
+
+<Steps>
+  <Step title="Add Realm to the Channel">
+    Type `@Realm` in the channel you'd like to connect your Agent to, then add Realm when prompted.
+  </Step>
+  <Step title="Copy the Channel ID">
+    In the channel, click on the channel name at the top, then scroll to the bottom to find the channel ID.
+  </Step>
+  <Step title="Configure the Agent">
+    When configuring your Agent, find the Slack section at the bottom.
+  </Step>
+  <Step title="Add the Channel">
+    Paste your Slack channel ID and click "Add Channel".
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/help-center/agent-slack-config.png" alt="Configuring Agent for Slack channel" />
+</Frame>
+
+## How It Works
+
+Once configured:
+
+1. Team members type `@Realm` in the channel followed by their question
+2. The configured Agent processes the question
+3. The Agent responds with an answer, drawing from its specific knowledge and instructions
+
+## Example Use Cases
+
+| Channel | Agent Purpose |
+|---------|---------------|
+| `#sales-support` | Answer questions about products, pricing, and competitors |
+| `#it-helpdesk` | Help with common IT issues and procedures |
+| `#customer-success` | Provide information about customer accounts and history |
+| `#hr-questions` | Answer questions about company policies and benefits |
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Match Agent to Channel Purpose" icon="bullseye">
+    Configure the Agent's knowledge and instructions to align with the channel's topic.
+  </Accordion>
+  <Accordion title="Curate Knowledge Carefully" icon="folder">
+    Only include relevant knowledge sources to ensure accurate, focused answers.
+  </Accordion>
+  <Accordion title="Set Clear Instructions" icon="clipboard">
+    Write instructions that help the Agent understand the context of questions in that channel.
+  </Accordion>
+  <Accordion title="Inform Your Team" icon="bullhorn">
+    Let channel members know about the Agent and how to use it effectively.
+  </Accordion>
+</AccordionGroup>
+
+## Limitations
+
+<Note>
+Only users with an active Realm license will be able to use the Realm Assistant in Slack channels.
+</Note>
+
+## Related Pages
+
+<CardGroup cols={2}>
+  <Card title="Slack App" icon="slack" href="/integrations/slack-app">
+    Use Realm via direct message
+  </Card>
+  <Card title="Creating Agents" icon="plus" href="/agents/creating-agents">
+    Learn how to create custom Agents
+  </Card>
+</CardGroup>

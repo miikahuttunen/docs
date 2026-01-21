@@ -1,0 +1,97 @@
+---
+title: 'Web Scraping'
+description: 'Sync content from any publicly accessible website'
+icon: 'globe'
+---
+
+## Web Scraping Connector
+
+Realm's web scraper can be used to scrape any publicly accessible website and add its content to your knowledge base.
+
+## Setting Up Web Scraping
+
+<Steps>
+  <Step title="Navigate to Connectors">
+    Go to the Connectors page in Realm.
+  </Step>
+  <Step title="Find Web Scraping">
+    Find "Web Scraping" and click **Manage**, then **"+ Add site"**.
+  </Step>
+  <Step title="Enter URL">
+    Insert the URL you wish to sync (e.g., `https://example.com/docs`).
+  </Step>
+  <Step title="Configure Patterns (Optional)">
+    If you want to sync only certain URLs, add include or exclude patterns.
+
+    <Frame>
+      <img src="/images/help-center/web-scraping.png" alt="Web scraping configuration" />
+    </Frame>
+  </Step>
+  <Step title="Save">
+    Click Save to start the sync.
+  </Step>
+</Steps>
+
+## URL Patterns
+
+Use patterns to control what content is synced:
+
+### Include Patterns
+
+Specify patterns to only sync matching URLs:
+
+| Pattern | Effect |
+|---------|--------|
+| `/docs/*` | Only sync pages under /docs |
+| `/blog/2024/*` | Only sync 2024 blog posts |
+| `*/api/*` | Only sync API documentation |
+
+### Exclude Patterns
+
+Specify patterns to skip matching URLs:
+
+| Pattern | Effect |
+|---------|--------|
+| `/login` | Skip login page |
+| `/admin/*` | Skip admin pages |
+| `*.pdf` | Skip PDF files |
+
+## Use Cases
+
+<CardGroup cols={2}>
+  <Card title="Product Documentation" icon="book">
+    Sync public product docs from your website
+  </Card>
+  <Card title="Help Centers" icon="circle-question">
+    Import external help center content
+  </Card>
+  <Card title="Competitor Research" icon="magnifying-glass-chart">
+    Track competitor public documentation
+  </Card>
+  <Card title="Partner Content" icon="handshake">
+    Sync partner documentation and resources
+  </Card>
+</CardGroup>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Respect robots.txt" icon="robot">
+    Only scrape websites that allow crawling. Check the site's robots.txt file.
+  </Accordion>
+  <Accordion title="Use Specific Patterns" icon="bullseye">
+    Be specific with include/exclude patterns to avoid syncing irrelevant content.
+  </Accordion>
+  <Accordion title="Monitor Content" icon="eye">
+    Periodically review scraped content to ensure it remains relevant and accurate.
+  </Accordion>
+  <Accordion title="Start Small" icon="seedling">
+    Begin with a specific section of a website before expanding to more pages.
+  </Accordion>
+</AccordionGroup>
+
+## Limitations
+
+- Only works with publicly accessible websites
+- Dynamic content (JavaScript-rendered) may not be fully captured
+- Rate limiting may apply to prevent overloading target sites

@@ -1,0 +1,63 @@
+---
+title: 'Jira Connector'
+description: 'Connect Jira to sync issues and projects'
+icon: 'jira'
+---
+
+## Jira Connector
+
+Connect Jira to sync your issues, epics, and project data into Realm.
+
+## Setting Up the Connection
+
+<Steps>
+  <Step title="Identify an Admin">
+    Choose an admin with access to the Jira projects you want to sync.
+  </Step>
+  <Step title="Install Realm Connect App">
+    Navigate to `https://[your-organization].withrealm.com/admin/connect?open=jira` and follow the instructions:
+
+    1. Go to [Realm on Atlassian Marketplace](https://marketplace.atlassian.com/apps/1233308/realm?tab=overview&hosting=cloud)
+    2. Click "Get it now" and install the app for the site you want to connect
+  </Step>
+  <Step title="Configure the App">
+    Once installed, click "Configure" and copy the tokens into Realm.
+
+    <Frame>
+      <img src="/images/help-center/jira-tokens.png" alt="Jira token configuration" />
+    </Frame>
+  </Step>
+  <Step title="Select Projects">
+    Choose which projects you want to sync from the list of available projects.
+
+    <Frame>
+      <img src="/images/help-center/jira-projects.png" alt="Jira project selection" />
+    </Frame>
+  </Step>
+</Steps>
+
+## Content Synced
+
+From the projects you choose to sync:
+
+- Epics
+- Issues
+- Issue comments
+
+## Jira Service Management
+
+Realm's Jira connector can also be used to sync **Jira Service Management** data.
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Project Selection" icon="folder">
+    Start with your most active projects and expand coverage as needed.
+  </Accordion>
+  <Accordion title="Admin Access" icon="shield">
+    Ensure the connecting admin has access to all projects you want to sync.
+  </Accordion>
+  <Accordion title="Token Security" icon="key">
+    Keep your connection tokens secure and rotate them periodically.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,107 @@
+---
+title: 'Triggers'
+description: 'Run Agents automatically on a schedule or in response to events'
+icon: 'bolt'
+---
+
+## What are Triggers?
+
+Triggers allow you to run your Agents in the background automatically. Instead of manually starting an Agent, you can configure it to run based on time or events.
+
+## Trigger Types
+
+<CardGroup cols={2}>
+  <Card title="Scheduled Triggers" icon="clock">
+    Configure Agents to run automatically at recurring, time-based intervals
+  </Card>
+  <Card title="Event-Driven Triggers" icon="bell">
+    Initiate workflows based on specific data events in your integrated systems
+  </Card>
+</CardGroup>
+
+## Scheduled Triggers
+
+Run your Agents on a recurring schedule.
+
+### Example Schedules
+
+- **Daily:** "Every morning at 9 AM"
+- **Weekly:** "Every Monday morning"
+- **Custom:** Any recurring schedule you define
+
+### Use Cases
+
+<AccordionGroup>
+  <Accordion title="Daily Digest" icon="newspaper">
+    Generate a summary of yesterday's important updates every morning.
+  </Accordion>
+  <Accordion title="Weekly Reports" icon="chart-line">
+    Create a weekly summary of key metrics and activities.
+  </Accordion>
+  <Accordion title="Regular Monitoring" icon="eye">
+    Check for specific conditions or changes on a regular basis.
+  </Accordion>
+</AccordionGroup>
+
+## Event-Driven Triggers
+
+Start workflows based on specific events occurring in your connected systems.
+
+### Example Events
+
+| System | Event Types |
+|--------|-------------|
+| **Slack** | New messages in a channel |
+| **CRM** | Deal stage updated, new lead created |
+| **Support** | New ticket created, ticket status changed |
+| **Project Tools** | Issue assigned, task completed |
+
+### How It Works
+
+<Steps>
+  <Step title="Event Occurs">
+    A specific event happens in your connected system (e.g., new Slack message).
+  </Step>
+  <Step title="Trigger Fires">
+    Realm detects the event and activates the associated Agent.
+  </Step>
+  <Step title="Context Provided">
+    The event provides contextual data directly to the Agent's workflow.
+  </Step>
+  <Step title="Agent Executes">
+    The Agent runs with the provided context and performs its task.
+  </Step>
+</Steps>
+
+### Use Cases
+
+<AccordionGroup>
+  <Accordion title="Auto-respond to Messages" icon="reply">
+    When a new message appears in a support channel, automatically draft a response.
+  </Accordion>
+  <Accordion title="Deal Updates" icon="handshake">
+    When a deal stage changes, update relevant stakeholders or create tasks.
+  </Accordion>
+  <Accordion title="New Lead Processing" icon="user-plus">
+    When a new lead is created, enrich the record with additional information.
+  </Accordion>
+</AccordionGroup>
+
+## Setting Up Triggers
+
+Triggers are configured in the Agent settings. You can add multiple triggers to a single Agent.
+
+<Note>
+Contact your Realm administrator to enable triggers for your workspace if you don't see the option.
+</Note>
+
+## Related Pages
+
+<CardGroup cols={2}>
+  <Card title="Tools & Actions" icon="wrench" href="/agents/tools-and-actions">
+    Enable Agents to take actions
+  </Card>
+  <Card title="Creating Agents" icon="plus" href="/agents/creating-agents">
+    Step-by-step Agent creation guide
+  </Card>
+</CardGroup>

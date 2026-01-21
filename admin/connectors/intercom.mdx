@@ -1,0 +1,57 @@
+---
+title: 'Intercom Connector'
+description: 'Connect Intercom to sync conversations and tickets'
+icon: 'intercom'
+---
+
+## Intercom Connector
+
+Connect Intercom to sync your conversations and tickets into Realm.
+
+<Note>
+The Realm connector to Intercom is in **beta**.
+</Note>
+
+## Setting Up the Connection
+
+<Steps>
+  <Step title="Create an Intercom App">
+    Visit the [Intercom Developer Hub](https://app.intercom.com/a/developer-signup) and create a new App.
+  </Step>
+  <Step title="Copy Access Token">
+    After creating the app, copy the Access Token.
+  </Step>
+  <Step title="Open Realm">
+    Navigate to `https://[your-organization].withrealm.com/admin/connect?open=intercom`.
+  </Step>
+  <Step title="Create the Connector">
+    Paste the access token into Realm and submit.
+  </Step>
+  <Step title="Wait for Sync">
+    Realm will start syncing your Intercom data.
+  </Step>
+</Steps>
+
+## Sync Duration
+
+The full sync can take from hours to multiple days, depending on the volume of conversations and tickets.
+
+## Content Synced
+
+- Conversations
+- Tickets
+- Help center articles (if available)
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Beta Considerations" icon="flask">
+    As a beta feature, expect occasional updates and improvements. Report any issues to the Realm team.
+  </Accordion>
+  <Accordion title="Token Security" icon="key">
+    Keep your access token secure and consider the permissions granted to the Intercom app.
+  </Accordion>
+  <Accordion title="Monitor Sync" icon="clock">
+    Check the sync status periodically to ensure data is being updated.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,107 @@
+---
+title: 'Query Syntax'
+description: 'Use advanced search operators for precise results'
+icon: 'code'
+---
+
+## Advanced Query Syntax
+
+Realm supports advanced query syntax to help you find exactly what you're looking for.
+
+## Exact Phrase Queries
+
+Use double quotes to search for an exact phrase.
+
+```text
+"funny cats"
+```
+Only includes results that contain the exact phrase "funny cats".
+
+```text
+rainy day "funny cats"
+```
+Includes results that contain the phrase "funny cats" AND are about rainy days.
+
+## Search Operators
+
+Use operators to filter by specific attributes:
+
+| Operator | Description | Example |
+|----------|-------------|---------|
+| `app:` | Filter by application | `app:Slack` |
+| `from:` | Filter by author | `from:Mikko` or `from:"Mikko Mäntylä"` |
+| `in:` | Filter by folder or channel | `in:fundraising` or `in:"customer intelligence"` |
+| `title:` | Filter by document title | `title:weekly` |
+
+### Examples
+
+```text
+app:Slack budget meeting
+```
+Search for "budget meeting" only in Slack messages.
+
+```text
+from:"Mikko Mäntylä" roadmap
+```
+Search for "roadmap" in documents authored by Mikko Mäntylä.
+
+```text
+in:fundraising investor
+```
+Search for "investor" in the fundraising folder or channel.
+
+```text
+title:weekly team
+```
+Search for documents with "weekly" in the title that mention "team".
+
+## Boolean Queries
+
+Use minus sign (`-`) to exclude terms:
+
+| Syntax | Description |
+|--------|-------------|
+| `-"cats"` | Exclude results containing "cats" |
+| `"cats" "dogs"` | Include results with both "cats" AND "dogs" |
+| `"cats" -"dogs"` | Include "cats" but exclude "dogs" |
+
+### Examples
+
+```text
+marketing -"social media"
+```
+Find marketing content that doesn't mention social media.
+
+```text
+"quarterly report" "2024"
+```
+Find documents containing both "quarterly report" and "2024".
+
+```text
+onboarding -"sales" -"engineering"
+```
+Find onboarding documents that aren't for sales or engineering.
+
+## Combining Operators
+
+You can combine multiple operators in a single query:
+
+```text
+app:Drive from:"Sarah Chen" title:proposal "Q4 budget"
+```
+Finds Google Drive documents by Sarah Chen with "proposal" in the title containing "Q4 budget".
+
+## Tips for Query Syntax
+
+<AccordionGroup>
+  <Accordion title="Use Quotes for Multi-Word Values" icon="quote-left">
+    When using operators with values that contain spaces, wrap them in quotes:
+    `from:"John Smith"` instead of `from:John Smith`
+  </Accordion>
+  <Accordion title="Combine with Filters" icon="layer-group">
+    Query syntax works alongside the visual filters—use both for maximum precision.
+  </Accordion>
+  <Accordion title="Start Simple" icon="lightbulb">
+    Try a basic search first, then add operators if you need to narrow results.
+  </Accordion>
+</AccordionGroup>

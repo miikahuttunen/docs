@@ -1,0 +1,117 @@
+---
+title: 'Tools and Actions'
+description: 'Enable Agents to execute tasks in your business applications'
+icon: 'wrench'
+---
+
+## What are Tools & Actions?
+
+Tools & Actions empower your Realm Agents to move beyond providing information and start executing tasks directly within your business applications.
+
+<CardGroup cols={2}>
+  <Card title="Tools" icon="toolbox">
+    The external applications (like CRM, email, or collaboration platforms) that Realm Agents connect to
+  </Card>
+  <Card title="Actions" icon="play">
+    The specific tasks the Agent can perform within those systems (e.g., updating a deal, creating an email draft)
+  </Card>
+</CardGroup>
+
+## Supported Tools
+
+Realm supports a growing list of native tools:
+
+| Tool | Example Actions |
+|------|-----------------|
+| **HubSpot** | Update deals, create contacts, log activities |
+| **Salesforce** | Update opportunities, create tasks, modify records |
+| **Gmail** | Draft emails, send messages |
+| **Google Calendar** | Create events, check availability |
+| **Outlook** | Draft emails, manage calendar |
+| **Slack** | Send messages, create channels |
+| **Freshdesk** | Update tickets, add comments |
+| **GitHub** | Create issues, add comments |
+
+### MCP Integration
+
+You can also connect Agents with virtually any application that offers a **Model Context Protocol (MCP)** server, extending capabilities beyond the native integrations.
+
+## Workflow Automation
+
+By leveraging Tools and Actions, Agents can automate complex, multi-step workflows:
+
+- Execute tasks across multiple systems
+- Create and update knowledge in your existing tech stack
+- Make collaboration feel like handing off a task to a human colleague
+
+## Viewing Available Tools
+
+You can view all available tools on the **Tools** page. Admins can choose which tools are available to users.
+
+<Frame>
+  <img src="/images/help-center/tools-page.png" alt="Tools page" />
+</Frame>
+
+## Authentication Methods
+
+Admins can configure how tools are authenticated:
+
+<CardGroup cols={2}>
+  <Card title="Organization Authentication" icon="building">
+    Uses a single set of administrator-provided credentials shared across all users. Typically used for tools where data is public or accessed via a service account.
+  </Card>
+  <Card title="Personal Authentication" icon="user">
+    Each user connects their own account via OAuth before using the Agent. Ensures actions adhere to the individual user's native permissions.
+  </Card>
+</CardGroup>
+
+## Example Workflows
+
+<AccordionGroup>
+  <Accordion title="Sales Follow-up" icon="handshake">
+    Agent receives a deal update trigger → Searches for relevant information → Drafts a follow-up email in Gmail → Updates the deal stage in HubSpot
+  </Accordion>
+  <Accordion title="Support Ticket Resolution" icon="ticket">
+    Agent receives a new ticket → Searches knowledge base → Drafts a response → Updates ticket status in Freshdesk
+  </Accordion>
+  <Accordion title="Meeting Preparation" icon="calendar">
+    Agent triggered before a meeting → Gathers relevant documents → Creates a summary → Sends to Google Calendar event
+  </Accordion>
+</AccordionGroup>
+
+## Setting Up Tools for an Agent
+
+<Steps>
+  <Step title="Create or Edit Agent">
+    Navigate to your Agent's configuration page.
+  </Step>
+  <Step title="Enable Tools">
+    Select which tools the Agent should have access to.
+  </Step>
+  <Step title="Configure Permissions">
+    Set what actions the Agent can perform with each tool.
+  </Step>
+  <Step title="Test the Agent">
+    Run the Agent with test queries to verify it can perform the expected actions.
+  </Step>
+</Steps>
+
+## Security Considerations
+
+<Warning>
+Agents with Tools & Actions can make changes to your connected systems. Always:
+- Review what actions an Agent can perform before enabling it
+- Test thoroughly in a safe environment
+- Monitor Agent activity for unexpected behavior
+</Warning>
+
+## Related Pages
+
+<CardGroup cols={2}>
+  <Card title="Triggers" icon="bolt" href="/agents/triggers">
+    Automate when Agents run
+  </Card>
+  <Card title="Creating Agents" icon="plus" href="/agents/creating-agents">
+    Step-by-step Agent creation guide
+  </Card>
+</CardGroup>

@@ -1,0 +1,98 @@
+---
+title: 'Agents Overview'
+description: 'Build custom AI assistants for specific tasks and workflows'
+icon: 'robot'
+---
+
+## What are Agents?
+
+Think of Agents as "mini-programs" with a specific task (e.g., email writing, POC doc creation, IT help desk).
+
+Agents can:
+- Access a specific set of internal knowledge
+- Perform web searches
+- Follow your specific instructions
+- Integrate with your workflows (e.g., Slack, HubSpot, Gmail)
+
+## Knowledge and Tools Combinations
+
+Agents are flexible—you can mix and match various combinations:
+
+<CardGroup cols={2}>
+  <Card title="Company Knowledge Only" icon="building">
+    Access to your connected company knowledge
+  </Card>
+  <Card title="Web Search + Knowledge" icon="globe">
+    Both web search and company knowledge
+  </Card>
+  <Card title="LLM Only" icon="microchip">
+    Pure AI without access to knowledge or web search
+  </Card>
+  <Card title="LLM + Web Search" icon="search">
+    AI with web search capabilities
+  </Card>
+</CardGroup>
+
+## Example Agents
+
+<AccordionGroup>
+  <Accordion title="Translation Assistant" icon="language">
+    **Purpose:** Helps with different translation tasks
+
+    **Knowledge:** No company context—works with any text
+
+    **Instructions:**
+    > You are an expert in language and communication. Your task is to translate text between different languages accurately and efficiently. Maintain the original tone and style, ensure cultural appropriateness, and use correct grammar and spelling in the target language.
+  </Accordion>
+
+  <Accordion title="Customer Bot Assistant" icon="users">
+    **Purpose:** Writes summaries on accounts when given a customer name
+
+    **Knowledge:** Specific folders and channels related to customers
+
+    **Instructions:**
+    > You are a digital assistant for summarizing customer information. Given a customer name, summarize everything you know including: tools connected, contract start date, pricing, meeting history, key contacts, and other useful information. Use only the provided contextual materials.
+  </Accordion>
+</AccordionGroup>
+
+## Finding Agents
+
+There are multiple ways to access Agents:
+
+### From the Sidebar
+Browse the Agent gallery from the sidebar and click "Talk" to start a conversation.
+
+<Frame>
+  <img src="/images/help-center/agent-gallery.png" alt="Agent gallery in sidebar" />
+</Frame>
+
+### Using the @ Keybind
+In Chat, type `@` to see your available Agents and select the one you want to use.
+
+<Frame>
+  <img src="/images/help-center/at-agents.png" alt="Selecting agents with @ keybind" />
+</Frame>
+
+### Pin Favorites
+On the Chat page, you can pin your favorite Agents (up to 6) for quick access.
+
+<Frame>
+  <img src="/images/help-center/pinned-agents.png" alt="Pinned agents" />
+</Frame>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Create an Agent" icon="plus" href="/agents/creating-agents">
+    Step-by-step guide to creating your own Agent
+  </Card>
+  <Card title="Write Instructions" icon="pen" href="/agents/writing-instructions">
+    Best practices for Agent prompts
+  </Card>
+  <Card title="Knowledge Selection" icon="folder" href="/agents/knowledge-selection">
+    Configure what knowledge your Agent can access
+  </Card>
+  <Card title="Tools & Actions" icon="wrench" href="/agents/tools-and-actions">
+    Enable your Agent to take actions
+  </Card>
+</CardGroup>

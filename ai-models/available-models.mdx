@@ -1,0 +1,107 @@
+---
+title: 'Available AI Models'
+description: 'Access leading AI models from OpenAI, Anthropic, and Google'
+icon: 'microchip'
+---
+
+## AI Models in Realm
+
+Realm supports leading AI models that you can use directly in Chat for general-purpose reasoning and writing.
+
+## Available Models
+
+| Model | Provider | Web Access | Best For |
+|-------|----------|------------|----------|
+| **GPT-5** | OpenAI | Yes | The best general-purpose model by OpenAI |
+| **GPT-4.1** | OpenAI | Yes | An older general-purpose model by OpenAI |
+| **Claude 4.5 Sonnet** | Anthropic | Yes | Excels at coding, technical projects, and copywriting |
+| **Gemini 2.5 Flash** | Google | Yes | A very fast model by Google |
+| **Gemini 2.5 Pro** | Google | Yes | The best general-purpose model by Google |
+| **o3** | OpenAI | Yes | Deep thinking for math, SQL, and complex problems |
+| **o4-mini** | OpenAI | Yes | Balanced speed and intelligence for everyday tasks |
+
+<Note>
+If you don't see all AI models in Realm, your admin may not have enabled them in your workspace. Contact your administrator to enable additional models.
+</Note>
+
+## How to Use AI Models
+
+<Steps>
+  <Step title="Open Chat">
+    Start a new chat or open an existing conversation.
+  </Step>
+  <Step title="Select a Model">
+    Type `@` in the chat input, or click the Realm icon.
+  </Step>
+  <Step title="Choose Your Model">
+    Select the AI model you want to use from the list.
+  </Step>
+  <Step title="Start Chatting">
+    Ask your question or provide your prompt.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/help-center/model-selection.png" alt="Selecting an AI model" />
+</Frame>
+
+## Web Search Capability
+
+All AI models in Realm can search online for you. This is a seamless process—Realm automatically decides from your query if an online search is necessary.
+
+### Example Use Cases
+
+- "What's the latest news about [company]?"
+- "Find recent research on [topic]"
+- "What are the current best practices for [technology]?"
+
+## Use Cases by Model
+
+<AccordionGroup>
+  <Accordion title="General Tasks" icon="list-check">
+    **Recommended:** GPT-5, Claude 4.5 Sonnet, Gemini 2.5 Pro
+
+    - Content creation (blog posts, marketing copy, documentation)
+    - Language translation and localization
+    - Creative writing and brainstorming
+    - Research and summarization
+  </Accordion>
+  <Accordion title="Technical Tasks" icon="code">
+    **Recommended:** Claude 4.5 Sonnet, GPT-5
+
+    - Software development and debugging
+    - Code review and explanation
+    - Technical documentation
+    - API design
+  </Accordion>
+  <Accordion title="Complex Reasoning" icon="brain">
+    **Recommended:** o3
+
+    - Mathematical problems
+    - SQL query writing
+    - Complex logical reasoning
+    - Multi-step problem solving
+  </Accordion>
+  <Accordion title="Quick Tasks" icon="bolt">
+    **Recommended:** Gemini 2.5 Flash, o4-mini
+
+    - Fast answers to simple questions
+    - Quick drafts and edits
+    - Everyday productivity tasks
+  </Accordion>
+</AccordionGroup>
+
+## Model Selection Tips
+
+<CardGroup cols={2}>
+  <Card title="Speed vs. Quality" icon="gauge">
+    For quick tasks, use Gemini 2.5 Flash or o4-mini. For complex tasks requiring deep reasoning, use o3 or Claude 4.5 Sonnet.
+  </Card>
+  <Card title="Coding Tasks" icon="code">
+    Claude 4.5 Sonnet is particularly strong at coding and technical projects.
+  </Card>
+</CardGroup>
+
+## Administrator Settings
+
+Administrators can control which models are available in your workspace through the Admin panel. See [Admin Features](/admin/overview) for more information.

@@ -1,0 +1,58 @@
+---
+title: 'Zendesk Connector'
+description: 'Connect Zendesk to sync tickets and knowledge base'
+icon: 'ticket'
+---
+
+## Zendesk Connector
+
+Connect Zendesk to sync your support tickets and knowledge base into Realm.
+
+## Setting Up the Connection
+
+<Steps>
+  <Step title="Identify a User">
+    Choose a Zendesk user to set up the connection. The user should have access to the tickets you want to sync.
+  </Step>
+  <Step title="Open Realm">
+    Navigate to `https://[your-organization].withrealm.com/admin/connect?open=zendesk`.
+  </Step>
+  <Step title="Create an API Key">
+    Follow [Zendesk's instructions](https://support.zendesk.com/hc/en-us/articles/4408889192858-Managing-API-token-access-to-the-Zendesk-API) to find or create your API key.
+
+    Copy and paste the key into Realm.
+  </Step>
+  <Step title="Enter Your Domain">
+    Enter your Zendesk domain (e.g., `https://company-name.zendesk.com/`).
+  </Step>
+  <Step title="Enter Your Email">
+    Enter your Zendesk email address. This must be the same email you used to generate the API key.
+  </Step>
+  <Step title="Submit">
+    Click Submit. Realm will start syncing your Zendesk tickets.
+  </Step>
+</Steps>
+
+## Sync Duration
+
+The full sync can take from hours to multiple days, depending on how many tickets you have.
+
+## Content Synced
+
+- Support tickets
+- Ticket conversations
+- Knowledge base articles
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="User Permissions" icon="shield">
+    Use an account with appropriate access to all tickets you want to sync.
+  </Accordion>
+  <Accordion title="API Key Security" icon="key">
+    Keep your API key secure and consider creating a dedicated service account.
+  </Accordion>
+  <Accordion title="Monitor Sync Progress" icon="clock">
+    Large ticket volumes may take several days to fully sync.
+  </Accordion>
+</AccordionGroup>
