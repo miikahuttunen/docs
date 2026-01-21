@@ -1,0 +1,1177 @@
+# Realm Help Center
+
+This page contains helpful info for using and getting the most out of Realm. 
+
+*Last update in November, 2025.*
+
+<aside>
+👀 **Couldn’t find a solution to your issue?**
+Send us a message in your company’s shared Slack or Teams channel with us or email us at support@withrealm.com. We’ll help you!
+
+</aside>
+
+# **General** 🚀
+
+### About Realm
+
+---
+
+- **What is Realm?**
+    
+    Realm is a platform for searching, asking questions, and building custom AI agents on top of your company’s knowledge. It includes built-in tools for tasks like answering RFPs, conducting web searches, and leveraging leading language models—out of the box.
+    
+    ---
+    
+- **Who are behind Realm?**
+    
+    Realm is a startup based in Helsinki, Finland, founded by former engineers from Pipe, Stripe, and Dropbox, as well as former Slush executives. Realm is backed by the founders of Zalando, Supercell, Wolt, Snyk, Pigment, Aiven, and others.
+    
+    ---
+    
+
+### Feedback
+
+---
+
+- **How do I report an issue or give feedback?**
+    
+    We’d love to hear from you—whether you’ve found a bug or have ideas for improvement. Your feedback helps us make Realm better, and we act on it quickly. You can share feedback in any of these ways:
+    
+    - Reach out via your shared Slack or Teams channel, or email us at [support@withrealm.com](mailto:support@withrealm.com).
+    - Use the 👍 / 👎 icons on individual chat replies to rate their helpfulness. This is the quickest way for us to spot issues and improve your experience.
+    
+    ![Screenshot 2024-09-26 at 21.14.04.png](Realm%20Help%20Center/Screenshot_2024-09-26_at_21.14.04.png)
+    
+    ---
+    
+
+# **Chat** 💬
+
+### Chat FAQ
+
+---
+
+- **What can I do with Chat in Realm?**
+    
+    Chat is the core interface of Realm. It allows you to interact with different Assistants and run a variety of workflows—ranging from searching internal knowledge to using external AI tools.
+    
+    You can switch between Assistants by clicking the Realm icon in Chat or by typing `@`. Each Assistant is designed for a specific purpose. Here are the main types:
+    
+    - **Realm (Default):** Ask questions about all your company’s connected knowledge—like documents, wikis, and messages—while respecting existing permissions.
+    - **LLMs:** Access leading AI models like GPT-5, Claude Sonnet 4.5, Gemini 2.5, and others directly within Realm for general-purpose reasoning and writing.
+    - **Custom Agents:** Use specialized Agents your team has built to handle specific tasks, tools, or workflows.
+    
+    ---
+    
+- **Research Mode**
+    
+    Research Mode is a powerful feature in Realm designed to handle your most complex analytical challenges. Research mode is available when using the default **Realm** agent.
+    
+    - **Tackle Complex Queries:** Research Mode is built to handle complex, multi-step queries that require in-depth analysis and synthesis of information from numerous sources, going beyond simple search and retrieval.
+    - **Agentic Multi-Step Reasoning:** It utilizes a multi-agent architecture to create and execute a detailed research plan, breaking down complex requests into smaller, sequential tasks. Specialized sub-agents perform tasks like searching, reading documents, and analyzing data.
+    - **Deliver Comprehensive Reports:** Realm performs multiple phases of analysis, reading up to hundreds of sources before compiling all findings into a single, comprehensive report that provides structured, actionable insights.
+- **Is Chat secure to use?**
+    
+    Yes. Chat is designed with security and privacy in mind:
+    
+    - **No data is used for training** – Your data is never used to train language models.
+    - **Zero data retention** – We use secure, zero-retention endpoints when interacting with language models.
+    - **Permission-aware responses** – Chat strictly follows your organization’s access controls. You’ll only see information you already have permission to access.
+    
+    ---
+    
+- **Can Chat give inaccurate or made-up answers?**
+    
+    Yes, that can happen. Here are a few common reasons why:
+    
+    1. **Retrieving precise information from large data sets is complex** – Especially when working with massive, unstructured company knowledge.
+    2. **Answers depend on the quality of the source material** – If the underlying content is outdated, incomplete, or incorrect, Chat may reflect that.
+    3. **Prompts affect results** – How you phrase your question can influence how well Chat understands what you're asking.
+    4. **Conflicting information can confuse the model** – When sources disagree, Chat may produce a confident but incorrect answer.
+    
+    We’re constantly improving accuracy, but we recommend verifying important responses. You can help us by rating replies with the 👍 / 👎 icons to share feedback directly with our team.
+    
+    ---
+    
+- **Which AI models does Chat use?**
+    
+    We use leading AI models from OpenAI, Anthropic, and Google. Realm automatically selects the model that delivers the best performance for your query. We continuously evaluate and fine-tune model selection to ensure the best possible user experience.
+    
+    ---
+    
+
+### Powering up your Chat experience
+
+---
+
+- **Using the universal keybind `@`**
+    
+    `@` is a universal keybind in Realm that lets you quickly select Assistants, documents, or tools.
+    For example, to switch to GPT-4.1, type `@`, start typing “gpt,” and press Enter to select GPT-4.1.
+    
+    ![Screenshot 2025-05-16 at 11.32.44.png](Realm%20Help%20Center/Screenshot_2025-05-16_at_11.32.44.png)
+    
+- **How to write effective Chat queries**
+    
+    The way you prompt Chat has a big impact on the quality of the answers. A good rule of thumb: ask questions the same way you would ask a knowledgeable colleague—clear, specific, and with enough context. Here are some examples:
+    
+    1. If you know of a good source, mention it. 
+        1. `Based on our shareholders’ agreement, how often should we hold board meetings?`
+    2. Ask follow-up questions
+        1. `What is the current list of Realm connectors?` (first query)
+        2. `Do we have Gong on the roadmap?` (follow-up)
+    3. Provide instructions how you want your reply formatted. 
+        1. `Create table describing how Realm differs from Glean`
+        2. `Write a short email about our HIPAA and GDPR compliance`
+    4. Specify the tools and time ranges in your query
+        1. `Based on Linear and Slack, what’s the status of Realm API project?`
+        2. `List all PRs about the Cycles feature from the past two days`
+        3. `What are the most recent mentions of bugs on #engineering-product?`
+    5. Ask Realm to correct the answer if you think the initial answer got something wrong or mixed
+        1. `Only include results from Acme company, exclude everything else.` 
+        2. `There should be more clients listed. Can you double check?`
+    
+    **🚫 Less effective prompts:**
+    
+    - *“Connectors?”*
+    - *“Roadmap?”*
+    - *“Email about GDPR.”*
+    
+    ---
+    
+- **When to ask follow-ups vs. start a new Chat**
+    
+    You can ask follow-up questions, and Chat will remember the context from your previous message. This helps you dig deeper without repeating yourself.
+    
+    To get the best results:
+    
+    - **Ask a follow-up** when you're continuing the same topic — for example, clarifying or expanding on the previous answer.
+    - **Start a new thread** when you're switching to a different topic — this avoids confusion and keeps responses relevant.
+    
+    ---
+    
+- **Using Chat citations effectively**
+    
+    References are a key feature of Chat in Realm. They show you exactly where an answer came from, helping you trust, verify, and explore the source material. References let you:
+    
+    1. **See the original sources behind each answer**
+    2. **Validate the accuracy and relevance of the response**
+    3. **Quickly navigate to the underlying files or pages**
+    
+    You can open each reference and preview it directly inside Realm. 
+    
+    ![chatpreviews.gif](Realm%20Help%20Center/chatpreviews.gif)
+    
+- **Asking questions about uploaded files**
+    
+    You can upload files to Chat and ask questions about them. Click the “Attach file” button to select files already in Realm or upload new ones from your device. You can attach up to 15 files per Chat.
+    
+    ![Screenshot 2024-09-27 at 14.06.12.png](Realm%20Help%20Center/Screenshot_2024-09-27_at_14.06.12.png)
+    
+- **Using filters in Chat**
+    
+    Realm is trained to automatically apply any filters that you refer to in your chat query. You could, for example, ask: *“how many hubspot deals of type new business are in the stage building business case”* and Realm should be able to apply the appropriate filters.
+    
+    ![Screenshot 2025-03-20 at 15.51.35 (2).png](Realm%20Help%20Center/Screenshot_2025-03-20_at_15.51.35_(2).png)
+    
+    You will see what filters Realm chose to apply and, should some of them be incorrect, you can edit the filters manually and rerun the query. Simply click on the pencil icon.
+    
+
+### Special types of chats
+
+---
+
+- **Using Realm to resolve support tickets**
+    
+    If you’re working with support tickets in tools like Zendesk or Freshdesk, you can ask Realm to directly suggest a resolution to a ticket. Simply paste a link to the ticket to a chat.
+    
+    ![image.png](Realm%20Help%20Center/image.png)
+    
+- **Data Analysis**
+    
+    When working with spreadsheets, Realm is able to write code to analyze the data and draw graphs based on it. To do this, follow this workflow:
+    
+    1. Select “Attach file” and attach a spreadsheet
+    2. Click “Data Analysis” to enable it.
+    3. Prompt Realm to analyze the data. For example: “Look at the sheet “user queries”. Draw a graph of the total daily number of queries per day between the start of the year and now”.
+- **Asking questions in foreign languages**
+    
+    You can ask Realm questions in other languages than English. Realm will search for materials that are in the same language as your prompt and then respond to you in the same language.
+    
+    However, if a significant share of your knowledge base in in a foreign language, make sure that your admins have informed the Realm team about this. There are significant optimizations that we can make, which improve Realm’s perfomance in a given language.
+    
+
+# Agents 🤖
+
+### Agents FAQ
+
+---
+
+- **What are Agents?**
+    
+    Think of Agents as “mini-programs” with a specific task (e.g email writing, POC doc creation, help-it). 
+    
+    Agents could have access to specific set of internal knowledge, can perform searches (websites), follow your specific instructions on the task and integrate to your workflows (e.g Slack). 
+    
+- **What are the tools & knowledge combinations available in Agents?**
+    
+    We keep agents flexible so you can mix and match various combinations. For more information about tools & actions see [Tools & Actions](https://www.notion.so/Tools-Actions-2a9bddf3cd2e801bbdd2ce368eaddc7c?pvs=21) 
+    
+    Example:
+    
+    1. Only company knowledge
+    2. Both websearch and company knowledge
+    3. Only LLMs without access to knowledge or websearch
+    4. LLMs with websearch
+- **What’s an example of an Agent?**
+    
+    Let’s take a look at two examples of Assistants.
+    
+    ***Translation Assistant*** ✒️
+    
+    - *This Assistant helps you with different translation tasks*
+    - *This Assistant does not have any context or knowledge about your company*
+    - *This Assistant is prompted to behave with the following instructions:*
+    
+    > *You are an expert in language and communication. Your task is to translate text between different languages accurately and efficiently.
+    
+    Provide high-quality translations that preserve the original meaning and tone of the content. Ensure cultural nuances and context are appropriately translated.
+    
+    Consider the following guidelines:
+    - Maintain the original tone and style.
+    - Ensure the translation is culturally appropriate.
+    - Use correct grammar and spelling in the target language.
+    
+    Wrap the translated text in ```[TEXT]``` code blocks.*
+    > 
+    
+    ***Customer Bot Assistant*** 👭
+    
+    - *This Assistant writes a summary on the account when given the name of a customer*
+    - *This Assistant knows specific folders or channels that are related to customers*
+    - *This is Assistant is prompted to behave with the following instructions:*
+    
+    > *You are a digital assistant called "customer assistant" for a company called Realm. Given the name of one of Realm's customers, such as "Wolt", your job is to summarize everything you know about this company.
+    
+    In your summary, follow the following structure:
+    1. Tools connected – by these we are referring to mainstream workplace knowledge management tools such as Slack, Google Drive or Confluence that the customer is connecting to and making searchable through Realm. Create a table with two colums, integration name and status (connected/not connected).
+    2. Contract start date, or, if you can't find that, since when the customer has been using Realm's product
+    3. Price paid (if applicable)
+    4. Meetings/touchpoints, including dates (in chronological order)
+    5. Admins (list a maximum of 5 KEY contact people at the customer, not all the users you can find. There must be clear indication that these people are the buyers/decision-makers/admins at the customer's end, not just average users. 
+    6. Other useful information
+    
+    To help answer these questions, you will be fed some contextual materials, retrieved from Realm's Google Drive, Notion, and/or Slack.
+    
+    Please only use information from the contextual materials provided. Do not attempt to make conjectures or to guess information that is not explicitly stated in the retrieved items. Also, cite only the most relevant retrieved items in your answer. If an item is only tangentially related to the question, do not cite it.
+    
+    If none of the retrieved items contain information on the company that's being asked about, say so. This probably means that the company in question is not a customer of Realm.
+    
+    Be concise in your answer. For sections 1, 4, and 5, format your answer as a table.*
+    > 
+- **How to write good instructions for Agents?**
+    
+    Core Principles:
+    
+    1. **Be clear and precise**: Provide specific objectives and detailed instructions. Longer prompts with relevant context outperform short queries. Use action verbs, define expected output format and length, and specify your target audience.
+    2. **Provide appropriate context**: Supply sufficient background information instead of simplifying complex topics, as modern AI models can process complex information effectively. Summarize components of what you want the assistant to know and do.
+    3. **Structure your prompts effectively**: Follow a logical ordering: (1) task context/role assignment, (2) tone setting, (3) background information/documents, and (4) detailed task description with rules.
+    4. **Include format guidance**: Adding examples to prompts significantly improves model response quality, especially when you need specific formatting. Show examples of desired outputs rather than just describing them.
+    5. **Define a clear persona**: Always define a persona to set the tone of the response, as this guides how the model communicates. This is especially important for customer-facing documentation.
+    6. **Tailor to your audience**: Include specific details about your target audience to ensure relevant outputs. For example, specify if content is for "tech-savvy developers at a startup."
+    7. **Address potential issues proactively**: Provide instructions for handling edge cases, though focus on reliably covering base cases first before moving to edge cases.
+    8. **Test and iterate**: Evaluate prompts under various scenarios and provide feedback to further improve outputs. Prompt engineering is an iterative process.
+    
+    Bonus tip:
+    
+    1. M**etaprompting**: Ask the LLM in Realm to create prompts for you. 
+    
+    Open chat > choose LLM like Claude, Gemini or GPT.
+    
+    Simply describe the task you want to accomplish, and the AI can generate an optimized prompt. Modern LLMs excel at creating effective prompts for themselves or other models, saving you time and often producing better results than manually crafted prompts.
+    
+- **How to create an agent?**
+    
+    
+    [Assistant.mp4](Realm%20Help%20Center/Assistant.mp4)
+    
+    How it works: 
+    
+    1. You pick whether Assistant will use websearch tool (e.g. you’d like to find latest company news online) or not.
+    2. You choose between All Company Knowledge, Selected Company Knowledge (example, only specific files from Drive, only HubSpot) or No Company Knowledge.
+    3. You provide instructions on how the Assistant should behave e.g. what is the core task, how to format the answer, specific web search instructions. 
+    4. You select the LLM for your use-case. Optionally: you can pick a specific temperature for the LLM.
+    5. You can also integrate the Assistant to a specific Slack channel. Instructions in [Powering up your Assistant experience](https://www.notion.so/Powering-up-your-Assistant-experience-1f5bddf3cd2e8147b903dd56b64cc442?pvs=21).
+    
+    Step-by-step Assistant creation:
+    
+    1. Click “Assistants” in the sidebar
+    
+    ![image.png](Realm%20Help%20Center/image%201.png)
+    
+    1. Find “Create Assistant” in the top-right corner
+    
+    ![image.png](Realm%20Help%20Center/image%202.png)
+    
+    1. Tell Realm what you want to want to do in Chat and follow the instructions. Alternatively, create a prompt beforehand in one of the LLMs.
+        
+        ![Screenshot 2024-09-29 at 14.45.27.png](Realm%20Help%20Center/Screenshot_2024-09-29_at_14.45.27.png)
+        
+    2. Finalize the Assistant in “Configure” **NB!** You can also skip the previous step and build your Assistant from scratch here.
+        
+        ![image.png](Realm%20Help%20Center/image%203.png)
+        
+- **How do I select specific knowledge for Agents? Can I upload files?**
+    
+    When you decide to create an Assistant with access to specific knowledge, you’ll select the knowledge in the Knowledge view. 
+    
+    ![Screenshot 2024-09-29 at 14.50.23.png](Realm%20Help%20Center/Screenshot_2024-09-29_at_14.50.23.png)
+    
+    ![In the Knowledge view, you can search for the specific files and also upload files for your Assistant.](Realm%20Help%20Center/Screenshot_2024-09-29_at_14.50.59.png)
+    
+    In the Knowledge view, you can search for the specific files and also upload files for your Assistant.
+    
+- **Where do I find the Agents?**
+    
+    Here are two ways how you can talk to different assistants!
+    
+    1. **Browse the Assistant gallery from the sidebar and click “Talk”**
+        
+        ![Screenshot 2024-09-29 at 14.36.23.png](Realm%20Help%20Center/Screenshot_2024-09-29_at_14.36.23.png)
+        
+    2. **In Chat, write “@” to see your Assistants and select the one you wish to use.**
+        
+        ![Screenshot 2024-09-29 at 14.37.12.png](Realm%20Help%20Center/Screenshot_2024-09-29_at_14.37.12.png)
+        
+    
+    1. **In Chat page, you have an option to pin your favourite Assistants (up to 6)**
+        
+        ![image.png](Realm%20Help%20Center/image%204.png)
+        
+
+## Triggers
+
+Triggers allow you to run your agents in the background. You can create two types of triggers:
+
+- **Scheduled Triggers:** Configure agents to run automatically at recurring, time-based intervals (e.g., "every Monday morning").
+- **Event-Driven Triggers:** Initiate a workflow based on specific data events occurring across your integrated systems. This can be, for example, new messages in a Slack channel or a "Deal Stage" being updated in your CRM. When an event fires, it provides contextual data directly to the agent's workflow.
+
+## Tools & Actions
+
+Tools & Actions empower your Realm Agents to move beyond providing information and start executing tasks directly within your business applications.
+
+- **Enable Agents to Act:** Tools are the external applications (like CRM, email, or collaboration platforms) that Realm Agents connect to, while Actions are the specific tasks (e.g., updating a HubSpot deal, creating an email draft, or adding a comment to a support ticket) the Agent can perform within those systems.
+- **Deep Integration:** Realm supports a growing list of native tools, including HubSpot, Salesforce, Gmail, Google Calendar, Outlook, Slack, Freshdesk, and GitHub. Additionally, you can connect Agents with virtually any application that offers a Model Context Protocol (MCP) server.
+- **Automate Workflows:** By leveraging Tools and Actions, Agents can automate complex, multi-step revenue operations, allowing them to execute tasks and create knowledge directly in your existing tech stack, making collaboration feel like handing off a task to a human colleague.
+
+You can view the available tools on the **Tools** page. Admins can choose which tools are available. Admins can also configure how tools are authenticated. Tools can be connected using either:
+
+- **Organization Authentication** uses a single set of administrator-provided credentials, which are shared across all users of that integration. This method is typically used for tools where the data is public or accessed via a service account.
+- **Personal Authentication** requires each user to connect their own account via OAuth before using the associated Agent or tool. This ensures that the Agent's actions and data access strictly adhere to the individual user's native permissions within the external system, such as accessing their personal email or calendar.
+
+![image.png](Realm%20Help%20Center/image%205.png)
+
+### Powering up your Assistant experience
+
+---
+
+*Note: only users with active license will be able to use Realm Assistant in the Slack channel*
+
+- **Adding Agents to Slack channel**
+    
+    Realm allows you to add Assistants to Slack channels. For example, if you have a #solutions-engineering Slack channel, you could add an Virtual Solutions Engineer Assistant there. Your team can then ask questions in the Slack channel by writing “@Realm” and asking the question. 
+    
+    You can add Assistant to Slack channel by following:
+    
+    1. Type @Realm in the channel channel you’d like to connect your Assistant. 
+    2. Add Realm
+    3. Copy the channel ID (*In the channel, click on the channel name at the top, then scroll to the bottom to find the channel ID*)
+    4. When Configuring the Assistant, find the Slack section at the bottom
+    
+    ![Screenshot 2024-09-29 at 14.54.14.png](Realm%20Help%20Center/Screenshot_2024-09-29_at_14.54.14.png)
+    
+    1. Paste your Slack channel ID  and then click “Add Channel”
+
+# AI Models in Realm (LLMs) 🖥️
+
+---
+
+- **Available LLMs in Realm**
+    
+    Realm supports the following leading AI models:
+    
+    | **Model** | **Provider** | **Web access?** | **What to use for?** |
+    | --- | --- | --- | --- |
+    | GPT-5 | OpenAI | Yes | The best general-purpose model by OpenAI. |
+    | GPT-4.1 | OpenAI | Yes | An older general-purpose model by OpenAI. |
+    | Claude 4.5 Sonnet | Anthropic | Yes | Excels at coding, technical projects and copywriting. |
+    | Gemini 2.5 Flash | Google | Yes | A very fast model by Google. |
+    | Gemini 2.5 Pro | Google | Yes | The best general-purpose model by Google. |
+    | o3 | OpenAI | Yes | Deep thinking for math, SQL, and complex problems. |
+    | o4-mini | OpenAI | Yes | Balanced speed and intelligence for everyday tasks. |
+    
+    NB! If you don’t see all AI models in Realm, your admin has not enabled them in your workspace.
+    
+- **How can I use these models in Realm?**
+    
+    Write “@” in the Chat (or click the Realm Icon) and select the AI model you want to use.
+    
+    ![image.png](Realm%20Help%20Center/image%206.png)
+    
+    ![Screenshot 2024-09-29 at 13.50.34.png](Realm%20Help%20Center/Screenshot_2024-09-29_at_13.50.34.png)
+    
+- **Can LLMs in Realm use websearch?**
+    
+    Yes, LLMs can search online for you, e.g. latest company news today. It is a seamless process, Realm can decide from your query if online search is necessary.
+    
+- **What can I do with the AI models?**
+    
+    Realm enables you to use leading AI models directly in Realm. Given these models constantly change, certain models may be the best for the specific use cases. 
+    
+    There are endless use cases for generative models. For example, use it to:
+    
+    1. Language translation and localization
+    2. Content creation from blog posts, marketing copy to code documentation
+    3. Software development and debugging
+    4. Creative writing like generating story ideas
+    5. Researching news 
+    6. Legal and compliance documentation
+
+# **Search** 🔍
+
+### Search FAQ
+
+---
+
+- **What is Search and when should I use it?**
+    
+    Realm has a workplace search engine across all platforms you’ve connected. Think of it as quick and easy way of finding what you need to do your work (e.g document, presentation, message), just like Google Search. Search is useful in the following situations:
+    
+    1. **Find the exact file** – ****you have a specific file in mind and want to open it up quickly. 
+    2. **You want to revisit a document, but don’t remember what it’s called** – our search is quite good at locating the right document even when you don’t remember exactly what it’s called.
+    3. **Get the big picture on customer or documentation** – you want to quickly scroll through every mention of a customer, product feature, or other topic.
+- **What are the suggestions I’m seeing as I type?**
+    - As you’re typing out a search in Realm, you’ll notice that you’re prompted with Suggestions.
+    - To see a full list of relevant results, hit enter to run the search, and view the results on Realm’s Search Results page instead.
+    - However, do note that documents are suggested **based on title only**, and **do not include Slack messages**.
+    - For a full and far more powerful search experience, hit enter to run the search, and view the results on Realm’s Search Results page instead.
+    
+    Note: documents are suggested **based on title only**, and **do not include Slack messages**. However, you will see Slack Messages in Search Results page.
+    
+    ---
+    
+- **What defines the results I see?**
+    
+    Realm searches across all document information – not just titles. Unlike many search bars in your workspace, Realm’s results are based on much more than a simple keyword search.
+    
+    We use a combination of techniques to deliver relevant results for your search query – even when you don’t know exactly what you’re looking for. These include:
+    
+    - Keyword matching
+    - Semantic matching (e.g you broadly remember the name of the file)
+    - Signals like how fresh a result is, how often it’s been shared, verification
+    
+    Note: We highly recommend to proactively use Curation Features. That is another signal for Realm that certain documentation is verified and should be prioritised in search results as well as hide files that are deprecated.
+    
+    ---
+    
+- **What is Turn into Chat**
+    
+    With Turn into Chat feature, you can seamlessly convert the Search result into a conversation to ask followup questions and explore the topic further.
+    
+    ---
+    
+
+### Powering up your Search experience
+
+---
+
+- **Filtering results**
+    
+    Realm offers five filters that help you narrow down your search. You can apply as many at the same time as you wish.
+    
+    1. **From** – only show results from specific authors (= the person who created a document, sent a message, or left a comment)
+    2. **Created** – only show results created within a certain time range
+    3. **Updated** – only show results last updated within a certain time range
+    4. **Type** - only show results from specific file types like PDFs, Issues, or Spreadsheets
+    5. **App filter** – only show results from a specific app
+    
+    ![Screenshot 2024-09-29 at 13.09.24.png](Realm%20Help%20Center/Screenshot_2024-09-29_at_13.09.24.png)
+    
+    ---
+    
+- **Sorting results**
+    
+    By default, the most relevant results are shown first. However, you also have the option to sort results by:
+    
+    - **Last Edited** – the most recently updated results are shown first
+    - **Last Created** – the most recently created results are shown first
+        
+        ![Screenshot 2024-09-29 at 13.10.22.png](Realm%20Help%20Center/Screenshot_2024-09-29_at_13.10.22.png)
+        
+    
+    ---
+    
+- **Query syntax ( “realm”   from:mikko   app:slack )**
+    
+    Realm currently supports limited query syntax. 
+    
+    - **Exact phrase query (`“”`)**
+        - `"funny cats"` only include results that contain the phrase *“funny cats”.*
+        - `rainy day "funny cats"` includes results that contain the phrase *“funny cats”* and are **about** rainy days.
+    - **Search operators (`app:` `from:`...)**
+        - `app:Slack` – filter by application
+        - `from:Mikko` `from:"Mikko Mäntylä"`– filter by author
+        - `in:fundraising` `in:"customer intelligence"` – filter by a structured element with an app, e.g. a **folder** in a Google Drive or a **channel name** in Slack
+        - `title:weekly` – title must contain “weekly”
+    - **Boolean queries (`-`)**
+        - `-"cats"` exclude results that contain the word *“cats”*.
+        - `"cats"` `"dogs"` includes only results that contain the word *“cats”* **AND** the word *“dogs”*.
+        - `"cats"` `-"dogs"` include only results that contain the word *“cats”* but **DO NOT** contain the word *“dogs”*.
+    
+    ---
+    
+- **Document preview**
+    
+    You can preview most search results right inside Realm by clicking Open Preview. This way, you often don’t have to open another tab to find what your are looking for.
+    
+    ![Preview.gif](Realm%20Help%20Center/Preview.gif)
+    
+    ---
+    
+- **Chat with document**
+    
+    You can also talk to your document. 
+    
+    1. Click Chat with document. 
+    2. New chat will be open
+    3. You can ask additional questions or summarise this specific file
+        
+        ![image.png](Realm%20Help%20Center/image%207.png)
+        
+    
+    **NB:** when you use this function, Realm answers are only based on this specific file content and there will not be additional searches across your knowledge. You can remove the file and do a broader search.
+    
+    ---
+    
+- **Viewing your search history**
+    
+    Your full search history is available in the main menu, on the left side of your screen. You can also delete items from your history by hovering the result and clicking the “X” icon.
+    
+    ![Screenshot 2024-09-29 at 13.31.57.png](Realm%20Help%20Center/Screenshot_2024-09-29_at_13.31.57.png)
+    
+    ---
+    
+
+# Slack App and Chrome Extension ****👩🏼‍💻
+
+---
+
+- **How do I use and where do I find the Slack App?**
+    
+    You’ll find the Realm Slack App in the “Apps” section in Slack. Open it up and start chatting. 
+    
+    ![Screenshot 2025-05-22 at 15.31.35.png](Realm%20Help%20Center/Screenshot_2025-05-22_at_15.31.35.png)
+    
+    Admins can also make the Realm Slack app available in the Slack assistants sidebar. This enables you to open Realm Slackbot from top-right. If this is not enabled, ask your admins to follow the instructions [here](https://slack.com/intl/en-gb/help/articles/33077521383059-Display-AI-apps-in-Slack). 
+    
+    ![Screenshot 2025-05-22 at 15.33.44.png](Realm%20Help%20Center/Screenshot_2025-05-22_at_15.33.44.png)
+    
+    Realm’s Slack App lets you ask questions from the Chat directly in Slack. Do so by **sending a DM**, just like you would to a colleague. Once you’ve received an answer, you can ask a follow-up question. Do so by posting your follow-up questions in the same thread as the reply.
+    
+    ![Ask questions from Realm directly in Slack.](Realm%20Help%20Center/Slack_App_1.gif)
+    
+    Ask questions from Realm directly in Slack.
+    
+    You can also ask questions from different Assistants in Slack channels. For more information, check [**Adding Agents to Slack channel**](https://www.notion.so/Adding-Agents-to-Slack-channel-1f5bddf3cd2e80cbb5edc41a8f045994?pvs=21).
+    
+    ---
+    
+- **How do I use and where do I find the Chrome Extension?**
+    
+    
+    **Where I can install the Chrome extension?**
+    
+    The Realm Chrome extension can be installed from [Chrome Webstore.](https://chromewebstore.google.com/detail/realm/fdgpaflidjgjnijjdopfjaicfjpllkic) The extension enables you access Realm on any page and open Realm as the new tab by default.
+    
+    **How do I use it?**
+    The extension can be opened by pressing `CTRL or CMD + SHIFT + K` or clicking it from the Extension menu. NB! You may have installed Chrome Extension that has the same keybind. You can change the keybind from extension settings (Right click Realm Extension > Manage Extension > Keyboard shortcuts).
+    
+    You can decide if you run Chat query or Search query.
+    
+    ![Screenshot 2025-05-22 at 15.17.59.png](Realm%20Help%20Center/Screenshot_2025-05-22_at_15.17.59.png)
+    
+    <aside>
+    ⚠️ The extension does not work on Chrome’s own pages, such as new tabs or settings.
+    
+    </aside>
+    
+    The extension can also be used in the address bar of your browser by typing “r” + tab/space followed by your query.
+    
+    ![Screenshot 2025-05-22 at 15.19.32.png](Realm%20Help%20Center/Screenshot_2025-05-22_at_15.19.32.png)
+    
+    **Enabling or disabling a new tab override**
+    
+    If you want to enable/disable that Realm opens with a new tab, you can do it from Settings in Realm.
+    
+    ![Screenshot 2025-05-22 at 15.20.55.png](Realm%20Help%20Center/Screenshot_2025-05-22_at_15.20.55.png)
+    
+
+# Verifying and hiding results ✅
+
+- **What is the purpose of verifying/hiding results?**
+    
+    “I have no idea if this document is still up-to-date.”
+    
+    This is one of the most frequent pains that we’ve heard from Realm users. It’s impossible to know what company knowledge to trust – and if people can't trust knowledge, they won't use it.
+    
+    ![Frame 1000006399.png](Realm%20Help%20Center/Frame_1000006399.png)
+    
+    Realm’s verification and hiding features are designed to solve this.
+    
+    - **Verifying** a source tells the rest of the team that a source can be trusted – and also means that it will rank higher in Realm.
+    - **Hiding** a source ensures that outdated or misleading information isn’t accidentally used by your colleagues.
+    
+    Your whole team is empowered to help build trust in your company's most valuable resources.
+    
+- **What does it specifically mean to verify a result?**
+    
+    Verifying a result has two implications:
+    
+    - The document is shown with a green badge, letting other users know that it’s a trustworthy source.
+    - The document is boosted in Realm’s search results, meaning that it is more likely to be used as a source for answers.
+    
+    Internally at Realm, we verify the following types of documents, for example:
+    
+    - Key pieces of company documentation, such as wiki articles with basic company information and key processes.
+    - The latest versions of contract templates, sales decks, competitive battle cards, and other information of which there are often multiple versions.
+    - Key customer-facing documentation: our product roadmap, our help center, our trust centre, and more.
+- **What does it specifically mean to hide a result?**
+    
+    Hidden results will not be returned again by Realm or any Assistant. They can’t be found in search results, and they will not be used a sources in answers.
+    
+    Therefore, you should only hide results that you can confidently say shouldn’t be used for any purpose.
+    
+    Internally at Realm, we hide the following types of documents, for example:
+    
+    - Older versions and drafts of customer contracts
+    - Outdated versions of important documents: product specs, help center articles, internal guidelines, and such.
+    - Documents that may confuse Realm. For example, spreadsheets with mock questions and answers used to evaluate the product.
+- **Can I see all verified/hidden results somewhere?**
+    
+    Yes! All verified and hidden sources can be found under “Your curation” in Realm’s main menu. The tabs at the top let you toggle between your own curations and all curations in your workspace.
+    
+    It’s good practice to periodically review your own verified and hidden sources since your company’s knowledge will evolve over time.
+    
+
+# Connectors 🖇️
+
+### What knowledge does Realm have access to?
+
+---
+
+- **Which apps are connected?**
+    
+    Your company’s admins have connected specific apps and selected which parts of their content—such as particular Confluence Spaces or Salesforce objects—should be available in Realm. To view the list of connected sources and what data is included, click “Knowledge” in the Realm sidebar.
+    
+    ![Screenshot 2024-09-26 at 21.17.45.png](Realm%20Help%20Center/Screenshot_2024-09-26_at_21.17.45.png)
+    
+    ---
+    
+- **Some knowledge seems to be missing**
+    
+    If you can’t find what you’re looking for in Realm, it’s usually due to one of the following reasons:
+    
+    - **The data isn’t synced** – Your IT team may not have connected the data source yet. For example, the document might live in a colleague’s personal Drive, or you may be searching for a page in a Confluence Space that hasn’t been synced to Realm.
+    - **Access rights** – Realm respects your company’s access controls, so you’ll only see content you already have permission to access.
+    - **Search didn’t work as expected** – Sometimes the search may not return the right results, even if the data exists. We’re constantly working to improve this.
+    
+    <aside>
+    💬 Not sure which one it is? Just send us a message in your company’s shared Slack channel with us — we’re happy to help troubleshoot.
+    
+    </aside>
+    
+    ---
+    
+- **Are the results in Realm up-to-date?**
+    
+    Realm refreshes the search index at least every two hours, depending on the connector. Some sources, like Slack, are updated nearly in real time.
+    
+    ---
+    
+- **Does Realm respect and enforce existing access permissions on connected sources?**
+    
+    Yes, Realm mirrors your company’s existing permission model. Users can only access the data they’re authorized to see based on the source system’s permissions. Realm admins can also configure access by revoking permissions for specific tools or granting broader access when needed.
+    
+- **Can I upload my own files to Realm?**
+    
+    You can upload your own files from the “Knowledge” page. Uploaded files will appear under “Uploaded documents.” When uploading, you can choose to make the file either private or public. Public files will appear in the “Shared files” folder, and moving files in or out of this folder will change their visibility to your team.
+    
+
+### Connector documentation for Admins
+
+---
+
+*Note that only Admins can connect apps to Realm.*
+
+- **What tools can Realm be connected with?**
+    
+    Realm has native connectors for 20+ common workplace tools.
+    
+    An up-to-date list of all connectors available in Realm can be accessed here: [Connectors](https://www.notion.so/Connectors-d1c9addbf8d74de4ac17c54032194533?pvs=21).
+    
+- **Slack**
+    
+    ### Setting up the connection
+    
+    This guide outlines the two main steps for connecting your Slack workspace to Realm:
+    
+    1. **Connecting via OAuth**: This enables real-time syncing of new messages and files.
+    2. **Importing Historical Data**: This is done by uploading a Slack workspace export to sync all your organization's past conversations.
+    
+    ### Part 1: Setting up the real-time connection
+    
+    This process connects your Slack workspace to Realm, allowing for the continuous syncing of new messages and files from public channels.
+    
+    1. **Identify an Admin**: Choose a Slack workspace administrator to perform the connection.
+    2. **Connect Slack**: Navigate to `https://[your-organization].withrealm.com/admin/connect?open=slack` and click “**Authorize access to Slack**”.
+        
+        ![Screenshot 2025-09-17 at 16.05.59.png](Realm%20Help%20Center/Screenshot_2025-09-17_at_16.05.59.png)
+        
+    3. **Grant Access**: You will be redirected to a Slack OAuth consent screen. Review the permissions and click **Allow**.
+    
+    Once authorized, Realm will begin to sync new messages from **all public channels** in your workspace. To also sync messages from **private channels** you can add the Realm app to the channel you want to sync.
+    
+    The Realm Slack application requires the following scopes:
+    
+    **Bot Scopes:**
+    
+    - `channels:history`
+    - `channels:read`
+    - `files:read`
+    - `pins:read`
+    - `reactions:read`
+    - `team:read`
+    - `users:read`
+    - `users:read.email`
+    - `im:history`
+    - `im:read`
+    - `chat:write`
+    - `chat:write.customize`
+    - `app_mentions:read`
+    - `reactions:write`
+    - `groups:read`
+    - `assistant:write`
+    - `mpim:history`
+    - `mpim:read`
+    - `groups:history`
+    
+    **User Scopes:**
+    
+    - `channels:history`
+    - `channels:read`
+    - `files:read`
+    - `pins:read`
+    - `reactions:read`
+    - `team:read`
+    - `users:read`
+    - `users:read.email`
+    - `search:read`
+    
+    ---
+    
+    ### Part 2: Importing historical data with a Slack export
+    
+    Due to Slack API limitations, a full historical sync via the API will be very slow (~900 messages per hour). Uploading a workspace export is the recommended method to quickly and efficiently import your entire message history into Realm.
+    
+    1. **Export Your Slack Workspace Data**:
+        - As a Slack workspace admin, go to your workspace settings and navigate to **Settings & administration** > **Workspace settings**.
+        - Click on **Import/Export Data** in the top right.
+        - Select the **Export** tab and choose a date range for your export. To get all history, select the entire range.
+        - Click **Start Export**. Slack will notify you when the export is complete.
+        - Download the ZIP file containing your workspace data.
+    2. **Upload the Export File to Realm**:
+        - In the Realm admin panel, navigate to the Slack integration settings (`https://[your-organization].withrealm.com/admin/connect?open=slack`).
+        - Find the section for historical data import and use the interface to upload the ZIP file you downloaded from Slack.
+            
+            ![Screenshot 2025-09-17 at 16.14.32.png](Realm%20Help%20Center/Screenshot_2025-09-17_at_16.14.32.png)
+            
+        - Once the upload begins, a progress bar will appear in the bottom-right corner of the screen. The processing time depends on the size of your workspace export.
+    
+    ### **Important Considerations for Data Export**
+    
+    - **Private Channels in Export**: You can choose to exclude messages from private channels from the export sync using a toggle in the settings. Even if included, Realm respects existing permissions, meaning users can only see content they have access to in Slack.
+    - **File Size Limit**: The uploaded ZIP file has a size limit of 10GB. If your export is larger, you may need to perform multiple exports with different date ranges.
+    
+    ### Content synced by default
+    
+    - Conversations in public channels (channel messages, thread replies)
+    - Files shared in public channels
+    
+    ### Additional content that can be synced
+    
+    - Slack Connect channels – you can control which Slack connect channels are synced.
+    - Private channels – any private channels to which Realm’s Slack App has been added are synced.
+    - DMs – can be synced, but it’s not a self-serve feature. Reach out to us if this is of interest.
+    
+    ### Content that is not supported
+    
+    - Canvases, Lists
+    
+    ### Notes
+    
+    - Slack can be a noisy source. To reduce some of this noise, we:
+        - Ignore threads with bot messages and no human messages
+        - Penalize archived channels in our ranking
+        - Penalize very short messages in our ranking
+- **Google Drive**
+    
+    Realm supports two types of Google Drive syncs:
+    
+    - Connecting Shared Drives. This is done by Admins under Connectors.
+    - Connecting personal Drives. This can be done by each under Settings.
+    
+    ## Connecting Shared Drives
+    
+    ### Setting up the connection
+    
+    1. **Identify an Admin**: Choose a Google Drive admin to perform the connection.
+        
+        <aside>
+        ❗
+        
+        Realm only syncs the Shared Drives you select in Realm. If you want to further limit the access to Google Drive that Realm has via the API you can do the following:
+        
+        1. Create a Google Workspace account (e.g. realm@<your-domain.com>)
+        2. Share the Shared Drives you want Realm to be able to access to with the account.
+        3. Perform the OAuth flow (step 2) with the account.
+        </aside>
+        
+    2. **Connect Drive:** Navigate to `https://<your-domain>.withrealm.com/admin/connect?open=google-drive` and click **Authorize.**
+        1. You’ll see an OAuth consent screen. Click **Allow**.
+        
+        ![Screenshot 2025-02-13 at 13.56.58.png](Realm%20Help%20Center/Screenshot_2025-02-13_at_13.56.58.png)
+        
+    3. **Select Shared Drives to sync:** Select which Shared Drives you want to sync from the list of all available Shared Drives.
+    
+    ### Content synced by default
+    
+    - Admins choose which Shared Drives to sync.
+    - From selected Shared Drives, Ream syncs a wide range of document types (Docs, Slides, Sheets, PDFs, .docx, .pptx, .xlsx…).
+    
+    ### Content that is not supported
+    
+    - Google Forms, Google Sites and some other less prominent content types
+    - Comments on files
+    
+    ## Connecting personal Drives
+    
+    Every user can connect Google Drive files that they personally have access to under “Settings”. Other users that already had access to such files will also gain access to them. Realm strictly follows the native permission for all Google Drive materials.
+    
+    ![Screenshot 2025-05-16 at 11.16.40.png](Realm%20Help%20Center/Screenshot_2025-05-16_at_11.16.40.png)
+    
+- **HubSpot**
+    
+    ### Setting up the connection
+    
+    1. **Identify an Admin:** Choose a Hubspot admin to perform the connection.
+    2. **Ensure access:** Make sure the said admin has the necessary permissions to access the Hubspot data you want to sync with Realm.
+    3. **Connect Hubspot:** Navigate to `https://<your-domain>.withrealm.com/admin/connect?open=hubspot` and click **Authorize** .
+        1. You are redirected to Hubspot OAuth flow.
+            1. You potentially need to log in to Hubspot now.
+        2. Click **Connect app** to allow access for Realm to connect to Hubspot.
+        
+        ![image.png](Realm%20Help%20Center/image%208.png)
+        
+    4. You are redirected back to Realm.
+    5. **Select** which objects and properties you want to sync to Realm.
+        
+        ![image.png](Realm%20Help%20Center/image%209.png)
+        
+    
+    ### Content that is synced:
+    
+    - From the “CRM” module of HubSpot:
+        - Any Objects and Properties that you choose to sync.
+        - Activities related to each of the above.
+        - Attachments to Objects
+    - “Content” such as Knowledge Base articles
+    
+    ### Content that is not supported
+    
+    - Marketing data (such as Campaigns)
+    - Commerce data (such as Invoices)
+    - Reporting data (such as Dashboards)
+    - Library data (such as Templates)
+    
+- **Salesforce**
+    
+    ### Setting up the connection
+    
+    1. **Identify an Admin**: Choose a Salesforce admin to perform the connection.
+    2. **Ensure access:** Make sure the said admin has full read access to the following Salesforce objects: *Account, Opportunity, Contact, Contract, Order, Case, Campaign, Lead, Product.*
+    3. **Connect Salesforce:** Navigate to `https://<your-domain>.withrealm.com/admin/connect?open=salesforce` and click **Authorize.**
+        1. You are redirected to Salesforce OAuth flow.
+            1. You potentially need to log in to Salesforce now.
+        2. Allow access for Realm to connect to Salesforce.
+    4. You are redirected back to Realm.
+    5. **Select** which properties and objects you want to sync. Only the data you select here is synced and available in Realm.
+        
+        ![image.png](Realm%20Help%20Center/image%2010.png)
+        
+- **Jira**
+    
+    ### Setting up the connection
+    
+    To connect Jira with Realm:
+    
+    1. **Identify an Admin**: Choose an admin with access to the Jira projects you want to sync.
+    2. **Install the Realm Connect app**: Navigate to [https://<your-domain>.withrealm.com/admin/connect?open=jira](https://app.tryrealm.xyz/admin/connect?open=confluence) and follow the instructions**.**
+        1. Go to [https://marketplace.atlassian.com/apps/1233308/realm?tab=overview&hosting=cloud](https://marketplace.atlassian.com/apps/1233308/realm?tab=overview&hosting=cloud), click “Get it now” and install the app for the site you want to connect.
+        2. Once the app is installed, click “Configure” and copy the tokens into Realm.
+            
+            ![image.png](Realm%20Help%20Center/image%2011.png)
+            
+    3. **Select Projects to sync:** Select which spaces you want to sync from the list of all available spaces.
+        
+        ![Screenshot 2025-05-16 at 11.37.49.png](Realm%20Help%20Center/Screenshot_2025-05-16_at_11.37.49.png)
+        
+    
+    ### Content synced by default
+    
+    - From Projects you choose to sync, Realm syncs Epics, Issues and Issue comments.
+    - Realm’s Jira connector can also be used to sync Jira Service Management.
+- **Confluence**
+    
+    ### Setting up the connection
+    
+    To connect Confluence with Realm:
+    
+    1. **Identify an Admin**: Choose an admin with access to the Confluence spaces you want to sync.
+    2. **Install the Realm Connect app**: Navigate to [https://<your-domain>.withrealm.com/admin/connect?open=confluence](https://app.tryrealm.xyz/admin/connect?open=confluence) and follow the instructions**.**
+        1. Go to [https://marketplace.atlassian.com/apps/1233308/realm?tab=overview&hosting=cloud](https://marketplace.atlassian.com/apps/1233308/realm?tab=overview&hosting=cloud), click “Get it now” and install the app for the site you want to connect.
+        2. Once the app is installed, click “Configure” and copy the tokens into Realm.
+            
+            ![image.png](Realm%20Help%20Center/image%2011.png)
+            
+    3. **Select Spaces to sync:** Select which spaces you want to sync from the list of all available spaces.
+        
+        ![image.png](Realm%20Help%20Center/image%2012.png)
+        
+    
+    ### Content synced by default
+    
+    - From any Confluence Spaces you choose to sync, Realm syncs Pages, Blogs as well as embedded files (such as PDFs).
+    
+    ### Content that is not supported
+    
+    - Private Pages
+    - Comments
+    
+    ### Notes
+    
+    - Realm auto-verify pages that are verified in Confluence.
+    - Realm auto-hides pages that are archived in Confluence.
+    - Draft Confluence pages are not shown in Realm before they are published.
+    
+    ### Confluence Data Center
+    
+    1. Create a Personal Access Token (PAT): [https://confluence.atlassian.com/enterprise/using-personal-access-tokens-1026032365.html](https://confluence.atlassian.com/enterprise/using-personal-access-tokens-1026032365.html)
+        1. Disable the “Automatic expiry” option
+    2. Enter the token and Confluence instance URL in the [https://<your-domain>.withrealm.com/admin/connect?open=confluence](https://app.tryrealm.xyz/admin/connect?open=confluence)
+    3. Once the connection is successful, select the Confluence spaces that you want to sync
+- **Zendesk**
+    
+    ### Setting up the connection
+    
+    1. **Identify an User**: Choose a Zendesk user to set up the connection. The user should have access to the tickets you want to sync.
+    2. **Open Realm:** Go to `https://<your-domain>.withrealm.com/admin/connect?open=zendesk`
+    3. **Create an API key:**
+        1. Follow the instructions [**here](https://support.zendesk.com/hc/en-us/articles/4408889192858-Managing-API-token-access-to-the-Zendesk-API)** to find your Zendesk API key.
+        2. Copy and paste the key into Realm
+    4. **Find your Zendesk domain.**
+        1. It should look something like `https://{company-name}.zendesk.com/`
+        2. Add the domain to Realm
+    5. **Enter your email**
+        1. Enter your Zendesk email address (this must be the same email you used to generate the API key)
+    6. **Click Submit**
+        1. Realm will now start syncing your Zendesk tickets. The full sync can take from hours to multiple days, depending on how many tickets you have.
+- **Sharepoint**
+    
+    ### Setting up the connection
+    
+    1. **Identify an Admin**: Choose a Microsoft admin to perform the connection.
+    2. **Connect SharePoint:** Navigate to [https://<your-domain>.withrealm.com/admin/connect?open=sharepoint](https://app.tryrealm.xyz/admin/connect?open=sharepoint) and click **Authorize.**
+        
+        ![image.png](Realm%20Help%20Center/image%2013.png)
+        
+        1. You’ll see an OAuth consent screen. Click Accept. *This won’t start syncing any data yet.*
+            
+            ![image.png](Realm%20Help%20Center/image%2014.png)
+            
+        2. Our SharePoint integration requires the following scopes `Sites.Read.All, Files.Read.All, Directory.Read.All, Notes.Read.All`.
+        
+        <aside>
+        ❗
+        
+        You can choose which SharePoint sites are synced in Realm. If you want to further restrict what data Realm has access to you can create a Microsoft Service account that only has access to the specific sites you want to sync and use that account in the OAuth flow. The service account needs to be able to consent to applications.
+        
+        </aside>
+        
+        1. **Connect SharePoint with Application scopes (Optional)**
+        The default connection uses delegated scopes. This means that Realm will only be able to sync documents that the account doing the connection has access to (NB: permissions are still enforced). 
+        
+        If you want to sync *all* available documents, click “Connect with application permissions”. This will allow Realm to access all documents in Sharepoint.
+        
+        You can read more about delegated and application scopes [here](https://learn.microsoft.com/en-us/entra/identity-platform/permissions-consent-overview#delegated-access-access-on-behalf-of-a-user).
+            
+            ![image.png](Realm%20Help%20Center/image%2015.png)
+            
+    3. **Select sites to sync:** After accepting you’ll be redirected back to Realm. Select which sites you want to sync from the list of all available sites.
+        
+        ![image.png](Realm%20Help%20Center/image%2016.png)
+        
+- **Freshdesk/Freshservice**
+    
+    Realm supports both Freshdesk and Freshservice. Both can be connected via the Freshdesk connector. Freshservice connection is in ***beta***.
+    
+    ### Setting up the connection
+    
+    1. **Identify an User**: Choose a Freshdesk/Freshservice user to set up the connection. The user should have access to the tickets you want to sync.
+    2. **Open Realm:** Go to `https://<your-domain>.withrealm.com/admin/connect?open=freshdesk` 
+    3. **Create an API key:**
+        1. Follow the instructions to find your API key:
+            1. Freshdesk instructions: [link](https://support.freshdesk.com/support/solutions/articles/215517-how-to-find-your-api-key)
+            2. Freshservice instructions: [link](https://support.freshservice.com/support/solutions/articles/50000000306-where-do-i-find-my-api-key-)
+        2. Copy and paste the key into Realm
+    4. **Find your Freshdesk/Freshservice domain.**
+        1. It should look something like `https://{company-name}.freshdesk.com/` or `https://{company-name}.freshservice.com/`
+        2. Add the domain to Realm
+    5. **Click Submit**
+        1. Realm will now start syncing your Freshdesk/Freshservice tickets. The full sync can take from hours to multiple days, depending on how many tickets you have.
+    
+    **Note: API key should be of user with Admin Role**
+    
+- **Notion**
+    
+    ### Setting up the connection
+    
+    1. **Identify an Admin:** Choose a Notion admin to perform the connection.
+    2. **Ensure access:** Make sure the said admin has the necessary permissions to access the Notion data you want to sync with Realm.
+    3. **Connect Notion:** Navigate to `https://<your-domain>.withrealm.com/admin/connect?open=notion` and click **Authorize** **Access to Notion**
+        1. You are redirected to Notion OAuth flow.
+        2. At this point you are likely asked to select which Pages to sync (childpages are included).
+    4. You are redirected back to Realm.
+- **Intercom**
+    
+    The Realm connector to Intercom is in *beta*
+    
+    ### Setting up the connection
+    
+    1. **Create an Intercom app**: Visit the [Intercom Developer Hub](https://app.intercom.com/a/developer-signup), create a new App, then copy the Access Token. 
+    2. **Open Realm:** Go to `https://<your-domain>.withrealm.com/admin/connect?open=intercom` 
+    3. **Create the connector Submit**
+        1. Copy and paste the key into Realm and submit
+        2. Realm will now start syncing your Intercom tickets and conversations. The full sync can take from hours to multiple days, depending on how many you have.
+- **Web Scraping**
+    
+    Realm’s web-scraper can be used to scrape any publicly accessible website.
+    
+    ### Setting up the connection
+    
+    1. Navigate to Connectors page in Realm
+    2. Find “Web Scraping” and click “Manage” and then “+ Add site”
+    3. Insert the URL you wish to sync
+    4. If you wish to sync only certain URLs, you can add include or exclude patterns to control what parts of your website is synced.
+        
+        ![Screenshot 2025-04-30 at 11.15.40.png](Realm%20Help%20Center/Screenshot_2025-04-30_at_11.15.40.png)
+        
+    5. Click Save
+- **A connector has failed to sync, what should I do?**
+    
+    If you notice that a sync of some knowledge has Failed, or hasn’t completed for multiple days, please reach out to the Realm team. Sync issues almost always require some action on our end.
+    
+    Our team proactively monitors your syncs, but, sometimes, we may have failed to notice a particular failed sync.
+    
+
+# Filling RFP/RFIs
+
+- **How do I use Realm to fill out an RFP/RFIs**
+    
+    Realm can be used to fill out RFPs, RFIs and other information request from customers. The file has to be a spreadsheet (xlsx, xls or csv).
+    
+    After an initial AI-generated draft, you will also have the opportunity to finalize the RFP together with your team. You can edit the AI-generated answers and assign answers for colleagues to review.
+    
+    ## Using Realm to fill an RFP/RFI
+    
+    [RFP workflow.mp4](Realm%20Help%20Center/RFP_workflow.mp4)
+    
+    ### Filling an RFP
+    
+    - Make sure you have an **unfilled** version of the RFP on your laptop.
+    - Go to “RFPs” in Realm’s main menu.
+    - Click “Upload RFP” and upload your RFP.
+    - Wait for the file to be parse and analyzed.
+    - Review the AI-generated plan for filling each section of the RFP and make edits if necessary. If the plan looks off, you can:
+        - Edit the cells, rows and columns to be filled in. Just click on them.
+        - Add columns or rows to the section.
+        - Skip an entire section. This means that it won’t be filled in with AI.
+        - **NB!** The RFP will be broken down into sections that may not correspond to the sheets in the original spreadsheet. This is a feature, not a bug. When you export the final RFP, the spreadsheet will still look exactly like it did originally.
+    - Select which Assistant should be used to fill each section. Generally, you should either use Realm (which draws on your company’s whole knowledge base) or a more curated RFP Assistant that your team has created.
+    - Hit Fill Section (you’ll need to separately do so for each section). The section will be filled in with your chosen Assistant.
+    
+    ### Finalizing the RFP together with your team
+    
+    - Review every AI-generated answer, and do one of the following:
+        - Approve the answer (if it’s correct and final)
+        - Edit the answer manually
+        - Write a follow-up prompt, asking for edits, specification or additions to the answer.
+        - Assign the answer for a colleague to review. This will send them an email and a notification in Slack.
+    - Ensure that every answer in the RFP is reviewed and approved by you or a colleague.
+    - Once all answers have been approved, export the RFP, give it a final check, and send it across to the customer.
+- **Are completed RFPs added to my knowledge base?**
+    
+    Yes! Once you’ve approved all rows of an RFP, it’s marked at “Completed”.
+    
+    Completed RFPs are automatically added to your knowledge base under a source called “RFPs”. They will automatically become part of the knowledge that Realm draws on.
+    
+    If the “RFPs” source has been added to the knowledge base of a particular Assistant, that Assistant will also automatically search any completed RFPs.
+    
+    You can also more specifically curate which RFPs, or which sections of an RFP, are added to a given Assistant.
+    
+- **How should an RFP be formatted before I upload it to Realm?**
+    
+    Generally, Realm is designed to handle RFPs with diverse and complicated structures. Most of the time, you won’t need to edit the RFP before uploading it to Realm.
+    
+    However, if you run into a situation where the RFP looks off after being uploaded to Realm, it might be that you need to simplify the RFP and upload it again. Here are some tips:
+    
+    - Make sure the question and answer columns form one continuous table. Remove any empty columns that break up the structure.
+    - Remove any unnecessary information from the RFP. For example, there might be some additional information outside of the actual area to be answered.
+    - Make sure each of the columns that should be answered have descriptive headers, such as “Answer” or “Vendor Answer”.
+    - Unmerge any merged cells.
+
+# API
+
+- **What can Realm’s API be used for?**
+    
+    On a high level, Realm’s API can be used for two things:
+    
+    1. Push knowledge to Realm from sources that we don’t have a connector for.
+    2. Embed a particular Assistant somewhere else, such as inside your own product or help center. This enables use cases like exposing a version of Realm (with access to appropriately curated data) to your own end users.
+- **Where can I find documentation for the API?**
+    
+    The API has its own separate documentation, accessible under “API docs” in the product. Read those for further instructions on how to use the API.
+    
+    ![Screenshot 2025-05-16 at 10.17.19.png](Realm%20Help%20Center/Screenshot_2025-05-16_at_10.17.19.png)
+    
+
+# Admin features ⛑️
+
+- **What admin features are available in Realm?**
+    
+    Realm admins can access the following features under “Admin” in Realm’s main menu.
+    
+    - Users – invite and manage your organization’s Realm users.
+    - Connectors – manage the knowledge that is connected to Realm.
+    - Models – control the LLMs available to your organization’s users.
+    - Usage data – access granular analytics on your organization’s usage of Realm
+    - API Access Tokens – create and manage your API access keys.

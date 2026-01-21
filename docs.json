@@ -49,7 +49,8 @@
               "agents/writing-instructions",
               "agents/knowledge-selection",
               "agents/triggers",
-              "agents/tools-and-actions"
+              "agents/tools-and-actions",
+              "agents/slack-channels"
             ]
           },
           {
@@ -79,8 +80,7 @@
           {
             "group": "Slack",
             "pages": [
-              "integrations/slack-app",
-              "integrations/slack-agents"
+              "integrations/slack-app"
             ]
           },
           {
