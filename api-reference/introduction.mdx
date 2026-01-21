@@ -1,33 +1,30 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: 'API Introduction'
+description: 'Integrate Realm's capabilities into your applications and push data to Realm with our API'
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+Welcome to the Realm API documentation. With this API you can add, edit and delete documents from Realm, as well as integrate Realm into your applications.
 
-## Welcome
+## Getting Started
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+First, you'll need to create an API token. You can create your own API token on the Settings page, or ask your admin to create one for you on the Admin API page.
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+Include your API token in all requests using the Authorization header:
 
-## Authentication
-
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
-
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
 ```
+Authorization: Bearer [your-api-token]
+```
+
+## Rate Limits
+
+This API implements rate limiting using a token bucket algorithm to ensure fair usage and system stability. When rate limits are exceeded, the API will return a 429 Too Many Requests status code.
+
+Each endpoint has its own rate limit configuration. If you exceed the rate limit, the request will be queued for up to 3 seconds before being rejected. We recommend implementing exponential backoff in your client applications when receiving 429 responses.
+
+## Pricing
+
+The API does not have a separate pricing for now; it is included in the Realm subscription. We might change this in the future, but will notice you well in advance if we do.
+
+## Need Help?
+
+If you encounter any issues or have questions, please contact our team in Slack or via email: team@withrealm.com
