@@ -57,13 +57,11 @@
             ]
           },
           {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
+            "group": "Reference",
+            "openapi": {
+              "source": "realm-api-docs.json",
+              "directory": "api-reference"
+            }
           }
         ]
       }
