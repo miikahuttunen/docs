@@ -77,6 +77,11 @@
           "anchor": "Blog",
           "href": "https://mintlify.com/blog",
           "icon": "newspaper"
+        },
+        {
+          "anchor": "Status",
+          "href": "https://status.withrealm.com/",
+          "icon": "signal-bars"
         }
       ]
     }
